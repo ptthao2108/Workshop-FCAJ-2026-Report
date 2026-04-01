@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Bản đề xuất :: Báo cáo thực tập</title>
+
+    
+    <link href="/css/nucleus.css?1775038754" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1775038754" rel="stylesheet">
+    <link href="/css/hybrid.css?1775038754" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1775038754" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1775038754" rel="stylesheet">
+    <link href="/css/auto-complete.css?1775038754" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1775038754" rel="stylesheet">
+    <link href="/css/theme.css?1775038754" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1775038754" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1775038754" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1775038754"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/vi/2-proposal/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1775038754"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1775038754"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1775038754"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.12-week12/">
+     <b> 1.12 </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Bản đề xuất"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/vi/2-proposal/">
+     <b> 2. </b> Bản đề xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/3-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/3-eventparticipated/">
+     <b> 3. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/3-eventparticipated/3.3-event3/"
+  title="Event 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/3-eventparticipated/3.3-event3/">
+     <b> 3.3. </b> Event 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-eventparticipated/3.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/3-eventparticipated/3.1-event1/">
+     <b> 3.3. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-eventparticipated/3.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/3-eventparticipated/3.2-event2/">
+     <b> 3.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/4-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/">
+     <b> 4. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-workshop/4.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.1-workshop-overview/">
+     <b> 5.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.2-prerequiste/"
+  title="Các bước chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.2-prerequiste/">
+     <b> 5.2. </b> Các bước chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.3-s3-vpc/"
+  title="Truy cập S3 từ VPC"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.3-s3-vpc/">
+     <b> 5.3. </b> Truy cập S3 từ VPC 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-workshop/4.3-s3-vpc/5.3.1-create-gwe/"
+  title="Tạo một Gateway Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Tạo một Gateway Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.3-s3-vpc/5.3.2-test-gwe/"
+  title="Kiểm tra Gateway Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 5.3.2 </b> Kiểm tra Gateway Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.4-s3-onprem/"
+  title="Truy cập S3 từ môi trường truyền thống"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.4-s3-onprem/">
+     <b> 5.4. </b> Truy cập S3 từ môi trường truyền thống 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-workshop/4.4-s3-onprem/5.4.1-prepare/"
+  title="Chuẩn bị tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Chuẩn bị tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Tạo một S3 Interface endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 5.4.2 </b> Tạo một S3 Interface endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.4-s3-onprem/5.4.3-test-endpoint/"
+  title="Kiểm tra Interface Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.4-s3-onprem/5.4.3-test-endpoint/">
+     <b> 5.4.3 </b> Kiểm tra Interface Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.4-s3-onprem/5.4.4-dns-simulation/"
+  title="Mô phỏng On-premises DNS "
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.4-s3-onprem/5.4.4-dns-simulation/">
+     <b> 5.4.4 </b> Mô phỏng On-premises DNS  
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.5-policy/"
+  title="VPC Endpoint Policies"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.5-policy/">
+     <b> 5.5 </b> VPC Endpoint Policies 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-workshop/4.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-workshop/4.6-cleanup/">
+     <b> 5.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-self-evaluation/">
+     <b> 5. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/6-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/6-feedback/">
+     <b> 6. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="http://localhost:1313/2-proposal/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="http://localhost:1313/vi/2-proposal/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer">
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Báo cáo thực tập</a> > Bản đề xuất
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#giải-pháp-cloud-native-trên-aws-hỗ-trợ-ra-quyết-định-món-ăn">Giải pháp Cloud-Native trên AWS hỗ trợ ra quyết định món ăn</a>
+      <ul>
+        <li><a href="#1-tóm-tắt-điều-hành">1. Tóm tắt điều hành</a></li>
+        <li><a href="#2-tuyên-bố-vấn-đề">2. Tuyên bố vấn đề</a></li>
+        <li><a href="#3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</a></li>
+        <li><a href="#4-scope-mvp">4. Scope MVP</a></li>
+        <li><a href="#5-lộ-trình--mốc-triển-khai">5. Lộ trình &amp; Mốc triển khai</a></li>
+        <li><a href="#6-ước-tính-ngân-sách">6. Ước tính ngân sách</a></li>
+        <li><a href="#7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</a></li>
+        <li><a href="#8-kết-quả-kỳ-vọng">8. Kết quả kỳ vọng</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Bản đề xuất
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="lunch-sync-platform-for-lunch-decision">Lunch Sync PLATFORM for Lunch Decision</h1>
+<h2 id="giải-pháp-cloud-native-trên-aws-hỗ-trợ-ra-quyết-định-món-ăn">Giải pháp Cloud-Native trên AWS hỗ trợ ra quyết định món ăn</h2>
+<h3 id="1-tóm-tắt-điều-hành">1. Tóm tắt điều hành</h3>
+<ul>
+<li>
+<p><strong>LunchSync</strong> là một <strong>Nền tảng Hỗ trợ ra quyết định theo nhóm</strong> theo thời gian thực, được thiết kế chuyên biệt cho nhân viên văn phòng tại khu vực đô thị mật độ cao (Quận 1, TP.HCM). Dự án giải quyết bài toán <strong>&ldquo;trưa nay ăn gì&rdquo;</strong> bằng cách số hóa quy trình thỏa hiệp của nhóm thông qua <strong>cơ chế bỏ phiếu nhanh (Gamified Voting)</strong> và thuật toán <strong>gợi ý dựa trên ngữ cảnh (Context-aware)</strong>.</p>
+</li>
+<li>
+<p>Khác với các ứng dụng Food Delivery tập trung vào vấn đề logistic, <strong>LunchSync không bán đồ ăn, mà bán &ldquo;quyết định&rdquo;</strong>,  giải quyết bài toán <strong>Mâu thuẫn sở thích</strong> cùng <strong>Mệt mỏi khi ra quyết định</strong> vào giờ nghỉ trưa. Với kiến trúc <strong>container-based serverless (Fargate) trên AWS</strong>, dự án đảm bảo khả năng <strong>xử lý lượng truy cập cao vào các giờ cao điểm</strong>, <strong>giảm thời gian chọn</strong> quán từ 20 phút xuống còn <strong>3 phút</strong>, <strong>tối ưu hóa giờ nghỉ trưa</strong> quý giá của người dùng.</p>
+</li>
+</ul>
+<h3 id="2-tuyên-bố-vấn-đề">2. Tuyên bố vấn đề</h3>
+<h4 id="vấn-đề-hiện-tại">Vấn đề hiện tại</h4>
+<ul>
+<li><strong>Decision fatigue:</strong> Sau giờ làm căng thẳng, mọi người <strong>không còn năng lượng để nghĩ “ăn gì”</strong>.</li>
+<li><strong>Conflict of preferences:</strong> Nhóm nhiều người → <strong>mỗi người một khẩu vị → khó chốt</strong>.</li>
+<li><strong>Resource wastage:</strong> Mất 15–20 phút chọn quán → <strong>giảm thời gian nghỉ trưa, ảnh hưởng năng suất</strong>.</li>
+<li><strong>Social friction thấp:</strong> Quyết định ăn chung <strong>không bị áp lực trách nhiệm cá nhân</strong>, vì kết quả là trải nghiệm chung của cả nhóm.</li>
+</ul>
+<h4 id="giải-pháp">Giải pháp</h4>
+<ul>
+<li>
+<p><strong>Core idea:</strong> Ứng dụng mobile tập trung vào <strong>real-time voting + elimination game</strong>, giúp nhóm <strong>chốt quán ăn trong ~90 giây</strong>.</p>
+</li>
+<li>
+<p><strong>Cách hoạt động:</strong></p>
+<ul>
+<li>Tạo <strong>session</strong> nhanh.</li>
+<li>Người dùng chọn tiêu chí qua <strong>binary choices (10 Preference dimension of food)</strong> - tiêu chí khẩu vị thay vì tranh luận món.</li>
+<li>Hệ thống dùng:
+<ul>
+<li><strong>Weighted Scoring</strong> → lọc &amp; xếp hạng quán.</li>
+<li><strong>&ldquo;Boom&rdquo; (random elimination)</strong> → cưỡng chế ra quyết định cuối cùng.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Người dùng chọn sở thích qua 10 chiều đặc tính món ăn (food preference dimensions): độ nước, nhiệt độ, độ nặng bụng, vị đậm nhạt, cay, kết cấu, thời gian ăn, độ mới lạ, healthy, ăn chung/riêng.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Mục tiêu MVP:</strong></p>
+<ul>
+<li>Xử lý <strong>concurrency cao</strong> (nhiều user vote cùng lúc).</li>
+<li>Xử lý <strong>geospatial data chính xác</strong> (gom quán theo landmark/area).</li>
+<li><strong>UX tối giản</strong>, tập trung tốc độ ra quyết định.</li>
+</ul>
+</li>
+<li>
+<p><strong>Technical implementation:</strong></p>
+<ul>
+<li>Kiến trúc: <strong>Modular Monolith</strong>.</li>
+<li>Design: <strong>Clean Architecture</strong> → dễ maintain &amp; mở rộng.</li>
+<li>Backend: <strong>ASP.NET</strong>.</li>
+<li>Hạ tầng: triển khai hoàn toàn trên <strong>AWS</strong>.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>MVP real-time sử dụng <strong>short polling (3s interval)</strong> thay vì WebSocket
+để giảm complexity. WebSocket sẽ được xem xét ở phase 2.</p>
+</blockquote>
+<h4 id="lợi-ích-và-hoàn-vốn-đầu-tư-roi">Lợi ích và hoàn vốn đầu tư (ROI)</h4>
+<ul>
+<li>
+<p><strong>Bảo mật &amp; ổn định:</strong> Private Subnet + Auto Scaling → đảm bảo <strong>high availability</strong>, giảm thiểu downtime.</p>
+</li>
+<li>
+<p><strong>Hiệu năng:</strong> Khả năng scale linh hoạt theo giờ cao điểm, độ trễ thấp nhờ CDN và caching.</p>
+</li>
+<li>
+<p><strong>Tập trung phát triển:</strong> Sử dụng managed services → giảm gánh nặng vận hành (Ops), tăng tốc phát triển MVP.</p>
+</li>
+<li>
+<p><strong>Chi phí hạ tầng (Baseline):</strong></p>
+<ul>
+<li>~55,75 USD/tháng (~1.400.000 VNĐ) cho các dịch vụ cốt lõi (Fargate, WAF, Route 53, Multi-AZ).</li>
+</ul>
+</li>
+</ul>
+<h4 id="roi-summary-saas">ROI Summary (SaaS)</h4>
+<ul>
+<li>
+<blockquote>
+<p>Bảng ROI dưới đây là <strong>giả định scaling</strong> khi chuyển sang</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>mô hình SaaS/Freemium sau khi đạt product-market fit.</p>
+</blockquote>
+</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Chỉ số</th>
+          <th>Giá trị</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Vốn đầu tư ban đầu</td>
+          <td>$5.000</td>
+      </tr>
+      <tr>
+          <td>Chi phí AWS / tháng</td>
+          <td>~$56</td>
+      </tr>
+      <tr>
+          <td>Doanh thu (100 users)</td>
+          <td>$2.000 / tháng</td>
+      </tr>
+      <tr>
+          <td>Lợi nhuận ròng</td>
+          <td>~$1.444 / tháng</td>
+      </tr>
+      <tr>
+          <td>Thời gian hoàn vốn</td>
+          <td>~3.4 tháng</td>
+      </tr>
+      <tr>
+          <td>ROI (1 năm)</td>
+          <td>~346%</td>
+      </tr>
+      <tr>
+          <td>Doanh thu (1.000 users)</td>
+          <td>$20.000 / tháng</td>
+      </tr>
+      <tr>
+          <td>Chi phí AWS (1.000 users)</td>
+          <td>~$180 / tháng</td>
+      </tr>
+      <tr>
+          <td>Biên lợi nhuận</td>
+          <td>~97% → ~99%</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Với chi phí ~55,75 - 71,75 USD/tháng, hệ thống đạt mức <strong>High Availability (Multi-AZ)</strong> và khả năng <strong>failover tự động</strong>. Khi một Availability Zone gặp sự cố, hệ thống sẽ chuyển sang AZ còn lại trong vài giây, đảm bảo dịch vụ hoạt động liên tục.</p>
+</blockquote>
+<h3 id="3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</h3>
+<p>Hệ thống được xây dựng trên nền tảng Amazon Web Services theo kiến trúc cloud-native, sử dụng Amazon ECS Fargate để triển khai backend theo mô hình container-based serverless, không cần quản lý hạ tầng.</p>
+<p>Ứng dụng được triển khai theo mô hình Multi-AZ kết hợp Auto Scaling nhằm đảm bảo High Availability và khả năng mở rộng linh hoạt trong giờ cao điểm. Lưu lượng truy cập được phân phối thông qua Application Load Balancer (ALB).</p>
+<p>Frontend được lưu trữ trên Amazon S3 và phân phối qua CloudFront CDN để tối ưu độ trễ. Hệ thống bảo mật bằng AWS WAF, Amazon Cognito và Security Groups nhằm kiểm soát truy cập và bảo vệ ứng dụng.</p>
+<p>Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon ElastiCache (Redis) được sử dụng để cache và xử lý các tác vụ độ trễ thấp như session và voting, giúp giảm tải cho backend. Hệ thống được giám sát bằng Amazon CloudWatch và triển khai tự động thông qua CI/CD với GitHub Actions, kết hợp Amazon ECR và AWS IAM.</p>
+<p><img src="/images/2-Proposal/lunchsync.png" alt="LunchSync Platform Architecture"></p>
+<p><em>Dịch vụ AWS sử dụng</em></p>
+<ul>
+<li><strong>Amazon ALB (Application Load Balancer)</strong>: Phân phối lưu lượng HTTP/HTTPS đến các service backend.</li>
+<li><strong>Amazon ECS Fargate</strong>: Chạy container backend theo mô hình serverless.</li>
+<li><strong>Amazon S3</strong>: Lưu trữ static assets và host frontend.</li>
+<li><strong>Amazon CloudFront</strong>: CDN phân phối nội dung frontend và hình ảnh với độ trễ thấp.</li>
+<li><strong>Amazon Cognito</strong>: Quản lý xác thực và phân quyền người dùng.</li>
+<li><strong>WAF tích hợp CloudFront</strong>: Bảo vệ hệ thống khỏi các tấn công web phổ biến.</li>
+<li><strong>Amazon RDS (PostgreSQL)</strong>: Lưu trữ dữ liệu quan hệ (user, restaurant, session, v.v.).</li>
+<li><strong>Amazon ElastiCache (Redis)</strong>: Cache dữ liệu nóng, xử lý voting và giảm tải hệ thống.</li>
+<li><strong>Amazon CloudWatch</strong>: Giám sát hệ thống (logs, metrics, alarms).</li>
+<li><strong>Amazon ECR</strong>: Lưu trữ Docker images phục vụ deployment.</li>
+<li><strong>AWS IAM</strong>: Quản lý quyền truy cập giữa các service và pipeline CI/CD.</li>
+</ul>
+<h3 id="4-scope-mvp">4. Scope MVP</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>In Scope</th>
+          <th>Out of Scope</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Meal type</td>
+          <td>Lunch only</td>
+          <td>Dinner, breakfast, cafe</td>
+      </tr>
+      <tr>
+          <td>Platform</td>
+          <td>React Web App (mobile-first)</td>
+          <td>Native mobile app</td>
+      </tr>
+      <tr>
+          <td>Backend</td>
+          <td>ASP.NET Pragmatic Modular Monolith</td>
+          <td>Microservices</td>
+      </tr>
+      <tr>
+          <td>Database</td>
+          <td>PostgreSQL</td>
+          <td>NoSQL</td>
+      </tr>
+      <tr>
+          <td>Vector computation</td>
+          <td>Trong .NET (math cơ bản)</td>
+          <td>Python external service</td>
+      </tr>
+      <tr>
+          <td>Group size</td>
+          <td>3–8 người</td>
+          <td>&gt;8</td>
+      </tr>
+      <tr>
+          <td>Auth</td>
+          <td>Host cần account (simple JWT - Cognito); Participant join bằng nickname</td>
+          <td>Social login (if time available)</td>
+      </tr>
+      <tr>
+          <td>Data</td>
+          <td>Manual curation</td>
+          <td>Auto-crawling</td>
+      </tr>
+      <tr>
+          <td>Geography</td>
+          <td>1 khu vực (3–5 collections)</td>
+          <td>Multi-city</td>
+      </tr>
+      <tr>
+          <td>Monetization</td>
+          <td>Free toàn bộ</td>
+          <td>Paid plans</td>
+      </tr>
+      <tr>
+          <td>Dietary</td>
+          <td>Không filter</td>
+          <td>Chay, dị ứng, halal</td>
+      </tr>
+      <tr>
+          <td>Restaurant action</td>
+          <td>Google Maps link</td>
+          <td>Đặt bàn, review, gọi quán</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="5-lộ-trình--mốc-triển-khai">5. Lộ trình &amp; Mốc triển khai</h3>
+<ul>
+<li><em>Thực tập (Tháng 1–3)</em>:
+<ul>
+<li>Tháng 1: Học AWS tìm hiểu hạ tầng và kỹ thuật.</li>
+<li>Tháng 2: Thiết kế và điều chỉnh kiến trúc cho phù hợp.</li>
+<li>Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.</li>
+</ul>
+</li>
+<li><em>Sau triển khai</em>: Nghiên cứu thêm trong vòng 1 năm.</li>
+</ul>
+<h3 id="6-ước-tính-ngân-sách">6. Ước tính ngân sách</h3>
+<ul>
+<li><strong>Amazon Route 53</strong>: 0,50 USD/tháng (1 Hosted Zone, &lt;10.000 query)</li>
+<li><strong>AWS WAF</strong>: 7,60 USD/tháng (1 WebACL, 2 rules cơ bản, &lt;1 triệu request)</li>
+<li><strong>Amazon ECS (Fargate)</strong>: 18,00 USD/tháng (2 tasks chạy 24/7 trên 2 AZs)</li>
+<li><strong>Amazon S3</strong>: 0,05 USD/tháng (1 GB storage, &lt;10.000 request)</li>
+<li><strong>Amazon CloudFront</strong>: 0,00 USD/tháng (&lt;1 TB data transfer – Always Free)</li>
+<li><strong>Amazon Cognito</strong>: 0,00 USD/tháng (~100 MAU – Always Free)</li>
+<li><strong>Application Load Balancer (ALB)</strong>: 0,00 USD/tháng (Free Tier) (~16,00 USD/tháng sau Free Tier)</li>
+<li><strong>Amazon RDS (PostgreSQL Multi-AZ)</strong>: ~18,00 USD/tháng (node phụ + storage nhân đôi)</li>
+<li><strong>Amazon ElastiCache (Redis Multi-AZ)</strong>: ~11,50 USD/tháng (2 nodes, trả phí node phụ)</li>
+<li><strong>Amazon ECR</strong>: 0,00 USD/tháng (&lt;500 MB storage)</li>
+<li><strong>Cross-AZ Data Transfer</strong>: ~0,10 USD/tháng</li>
+</ul>
+<hr>
+<h4 id="tổng-chi-phí-ước-tính"><strong>Tổng chi phí ước tính</strong></h4>
+<p><strong>~55,75 - 71,75 USD/tháng (~1.400.000 ~ 1.890.000 VNĐ)</strong></p>
+<h3 id="7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Rủi ro</th>
+          <th>Mức độ</th>
+          <th>Chiến lược giảm thiểu (Mitigation)</th>
+          <th>Chiến lược dự phòng (Contingency)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Hạ tầng / Uptime</strong> (AZ failure)</td>
+          <td>Thấp</td>
+          <td>Multi-AZ + ALB failover</td>
+          <td>Không cần (AWS tự xử lý)</td>
+      </tr>
+      <tr>
+          <td><strong>Bảo mật</strong> (DDoS, SQLi)</td>
+          <td>Thấp</td>
+          <td>WAF + Cognito + Private Subnet</td>
+          <td>Rotate credentials, isolate system</td>
+      </tr>
+      <tr>
+          <td><strong>Lỗi triển khai</strong> (bug production)</td>
+          <td>Trung bình</td>
+          <td>CI/CD + automated tests</td>
+          <td>Rollback version (ECS task revision)</td>
+      </tr>
+      <tr>
+          <td><strong>Chi phí vượt kiểm soát</strong> (cost spike)</td>
+          <td>Cao 🔴</td>
+          <td>Auto Scaling limit, WAF rate limit</td>
+          <td>AWS Budgets + Billing alarm</td>
+      </tr>
+      <tr>
+          <td><strong>Hiệu năng khi scale</strong></td>
+          <td>Trung bình</td>
+          <td>Cache Redis, CDN CloudFront</td>
+          <td>Scale DB / read replica</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="8-kết-quả-kỳ-vọng">8. Kết quả kỳ vọng</h3>
+<ul>
+<li>Hạ tầng: Kiến trúc cloud-native (Multi-AZ, Auto Scaling) giúp hệ thống đạt high availability, dễ mở rộng và giảm rủi ro downtime.</li>
+<li>Hiệu quả vận hành: Sử dụng managed services (Fargate, RDS, CloudFront) giúp giảm tải DevOps, tăng tốc phát triển và tối ưu chi phí.</li>
+<li>Tối ưu tài chính: Chi phí thấp nhưng biên lợi nhuận cao, tạo nền tảng tốt để scale mà không làm tăng chi phí tương ứng.</li>
+</ul>
+<blockquote>
+<p>Xây dựng một nền tảng SaaS ổn định, dễ mở rộng và có khả năng tăng trưởng dài hạn với hiệu quả chi phí cao.</p>
+</blockquote>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/1-worklog/1.12-week12/" title="Worklog Tuần 12"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/3-eventparticipated/" title="Các events đã tham gia" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1775038754"></script>
+    <script src="/js/perfect-scrollbar.min.js?1775038754"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1775038754"></script>
+    <script src="/js/jquery.sticky.js?1775038754"></script>
+    <script src="/js/featherlight.min.js?1775038754"></script>
+    <script src="/js/highlight.pack.js?1775038754"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1775038754"></script>
+    <script src="/js/learn.js?1775038754"></script>
+    <script src="/js/hugo-learn.js?1775038754"></script>
+
+    <link href="/mermaid/mermaid.css?1775038754" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1775038754"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Proposal :: Internship Report</title>
+
+    
+    <link href="/css/nucleus.css?1775038776" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1775038776" rel="stylesheet">
+    <link href="/css/hybrid.css?1775038776" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1775038776" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1775038776" rel="stylesheet">
+    <link href="/css/auto-complete.css?1775038776" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1775038776" rel="stylesheet">
+    <link href="/css/theme.css?1775038776" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1775038776" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1775038776" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1775038776"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/2-proposal/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1775038776"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1775038776"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1775038776"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/1-worklog/"
+  title="Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/">
+     <b> 1. </b> Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/1-worklog/1.1-week1/"
+  title="Week 1 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Week 1 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.2-week2/"
+  title="Week 2 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Week 2 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.3-week3/"
+  title="Week 3 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Week 3 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.4-week4/"
+  title="Week 4 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Week 4 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.5-week5/"
+  title="Week 5 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Week 5 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.6-week6/"
+  title="Week 6 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Week 6 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.7-week7/"
+  title="Week 7 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Week 7 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.8-week8/"
+  title="Week 8 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Week 8 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.9-week9/"
+  title="Week 9 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Week 9 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.10-week10/"
+  title="Week 10 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Week 10 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.11-week11/"
+  title="Week 11 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Week 11 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.12-week12/"
+  title="Week 12 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.12-week12/">
+     <b> 1.12 </b> Week 12 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/2-proposal/"
+  title="Proposal"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/2-proposal/">
+     <b> 2. </b> Proposal 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/3-eventparticipated/"
+  title="Events Participated"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-eventparticipated/">
+     <b> 3. </b> Events Participated 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/3-eventparticipated/3.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-eventparticipated/3.1-event1/">
+     <b> 3.3. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/3-eventparticipated/3.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-eventparticipated/3.2-event2/">
+     <b> 3.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/3-eventparticipated/3.3-event3/"
+  title="Event 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-eventparticipated/3.3-event3/">
+     <b> 3.3. </b> Event 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/4-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/">
+     <b> 4. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/4-workshop/4.1-workshop-overview/"
+  title="Introduction"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.1-workshop-overview/">
+     <b> 5.1. </b> Introduction 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.2-prerequiste/"
+  title="Prerequiste"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.2-prerequiste/">
+     <b> 5.2. </b> Prerequiste 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.3-s3-vpc/"
+  title="Access S3 from VPC"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.3-s3-vpc/">
+     <b> 5.3. </b> Access S3 from VPC 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/4-workshop/4.3-s3-vpc/5.3.1-create-gwe/"
+  title="Create a gateway endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Create a gateway endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.3-s3-vpc/5.3.2-test-gwe/"
+  title="Test the Gateway Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 5.3.2 </b> Test the Gateway Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.4-s3-onprem/"
+  title="Access S3 from on-premises"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.4-s3-onprem/">
+     <b> 5.4. </b> Access S3 from on-premises 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/4-workshop/4.4-s3-onprem/5.4.1-prepare/"
+  title="Prepare the environment"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Prepare the environment 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Create an S3 Interface endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 5.4.2 </b> Create an S3 Interface endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.4-s3-onprem/5.4.3-test-endpoint/"
+  title="Test the Interface Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.4-s3-onprem/5.4.3-test-endpoint/">
+     <b> 5.4.3 </b> Test the Interface Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.4-s3-onprem/5.4.4-dns-simulation/"
+  title="On-premises DNS Simulation"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.4-s3-onprem/5.4.4-dns-simulation/">
+     <b> 5.4.4 </b> On-premises DNS Simulation 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.5-policy/"
+  title="VPC Endpoint Policies"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.5-policy/">
+     <b> 5.5. </b> VPC Endpoint Policies 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-workshop/4.6-cleanup/"
+  title="Clean up"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-workshop/4.6-cleanup/">
+     <b> 5.6. </b> Clean up 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/5-self-evaluation/"
+  title="Self-Assessment"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-self-evaluation/">
+     <b> 5. </b> Self-Assessment 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/6-feedback/"
+  title="Sharing and Feedback"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/6-feedback/">
+     <b> 6. </b> Sharing and Feedback 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="http://localhost:1313/2-proposal/"
+                  selected
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="http://localhost:1313/vi/2-proposal/"
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer">
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Internship Report</a> > Proposal
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cloud-native-aws-solution-for-meal-decision-support">Cloud-Native AWS Solution for Meal Decision Support</a>
+      <ul>
+        <li><a href="#1-executive-summary">1. Executive Summary</a></li>
+        <li><a href="#2-problem-statement">2. Problem Statement</a></li>
+        <li><a href="#3-solution-architecture">3. Solution Architecture</a></li>
+        <li><a href="#4-mvp-scope">4. MVP Scope</a></li>
+        <li><a href="#5-roadmap--milestones">5. Roadmap &amp; Milestones</a></li>
+        <li><a href="#6-budget-estimation">6. Budget Estimation</a></li>
+        <li><a href="#7-risk-assessment">7. Risk Assessment</a></li>
+        <li><a href="#8-expected-outcomes">8. Expected Outcomes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Proposal
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="lunch-sync-platform-for-lunch-decision">Lunch Sync PLATFORM for Lunch Decision</h1>
+<h2 id="cloud-native-aws-solution-for-meal-decision-support">Cloud-Native AWS Solution for Meal Decision Support</h2>
+<h3 id="1-executive-summary">1. Executive Summary</h3>
+<ul>
+<li>
+<p><strong>LunchSync</strong> is a <strong>real-time group decision-support platform</strong>, specifically designed for office workers in high-density urban areas (District 1, Ho Chi Minh City). The project solves the <strong>&ldquo;what to eat for lunch&rdquo;</strong> problem by digitizing the group negotiation process through <strong>gamified voting mechanisms</strong> and <strong>context-aware recommendation algorithms</strong>.</p>
+</li>
+<li>
+<p>Unlike food delivery applications that focus on logistics, <strong>LunchSync does not sell food—it sells “decisions”</strong>, addressing both <strong>preference conflicts</strong> and <strong>decision fatigue</strong> during lunch breaks. With a <strong>container-based serverless architecture (Fargate) on AWS</strong>, the system ensures <strong>high concurrency handling during peak hours</strong>, reduces decision time from 20 minutes to <strong>3 minutes</strong>, and <strong>optimizes users’ valuable lunch breaks</strong>.</p>
+</li>
+</ul>
+<hr>
+<h3 id="2-problem-statement">2. Problem Statement</h3>
+<h4 id="current-problems">Current Problems</h4>
+<ul>
+<li><strong>Decision fatigue:</strong> After intense work hours, users <strong>lack the energy to decide what to eat</strong>.</li>
+<li><strong>Conflict of preferences:</strong> Larger groups → <strong>diverse tastes → difficult to reach consensus</strong>.</li>
+<li><strong>Resource wastage:</strong> Spending 15–20 minutes choosing a place → <strong>reduces break time and productivity</strong>.</li>
+<li><strong>Low social friction:</strong> Shared dining decisions <strong>reduce individual responsibility pressure</strong>, as outcomes are collective experiences.</li>
+</ul>
+<h4 id="solution">Solution</h4>
+<ul>
+<li>
+<p><strong>Core idea:</strong> A mobile application focused on <strong>real-time voting + elimination game</strong>, enabling groups to <strong>finalize a restaurant in ~90 seconds</strong>.</p>
+</li>
+<li>
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Quickly create a <strong>session</strong>.</li>
+<li>Users select preferences via <strong>binary choices (10 food preference dimensions)</strong>—focusing on taste criteria instead of debating dishes.</li>
+<li>The system applies:
+<ul>
+<li><strong>Weighted Scoring</strong> → filtering &amp; ranking restaurants.</li>
+<li><strong>&ldquo;Boom&rdquo; (random elimination)</strong> → forcing a final decision.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Users select preferences across 10 food dimensions: broth level, temperature, heaviness, flavor intensity, spiciness, texture, eating time, novelty, healthiness, and shared vs. individual dining.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>MVP Goals:</strong></p>
+<ul>
+<li>Handle <strong>high concurrency</strong> (multiple users voting simultaneously).</li>
+<li>Process <strong>accurate geospatial data</strong> (grouping restaurants by area/landmark).</li>
+<li>Deliver a <strong>minimal UX</strong>, optimized for decision speed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Technical Implementation:</strong></p>
+<ul>
+<li>Architecture: <strong>Modular Monolith</strong></li>
+<li>Design: <strong>Clean Architecture</strong> → maintainable &amp; extensible</li>
+<li>Backend: <strong>ASP.NET</strong></li>
+<li>Infrastructure: Fully deployed on <strong>AWS</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>MVP real-time uses <strong>short polling (3s interval)</strong> instead of WebSocket to reduce complexity. WebSocket will be considered in Phase 2.</p>
+</blockquote>
+<hr>
+<h4 id="benefits--return-on-investment-roi">Benefits &amp; Return on Investment (ROI)</h4>
+<ul>
+<li>
+<p><strong>Security &amp; Stability:</strong> Private Subnet + Auto Scaling → ensures <strong>high availability</strong>, minimizes downtime.</p>
+</li>
+<li>
+<p><strong>Performance:</strong> Flexible scaling during peak hours, low latency via CDN and caching.</p>
+</li>
+<li>
+<p><strong>Development Focus:</strong> Managed services reduce operational burden (Ops), accelerating MVP delivery.</p>
+</li>
+<li>
+<p><strong>Infrastructure Cost (Baseline):</strong></p>
+<ul>
+<li>~55.75 USD/month (~1,400,000 VND) for core services (Fargate, WAF, Route 53, Multi-AZ).</li>
+</ul>
+</li>
+</ul>
+<h4 id="roi-summary-saas">ROI Summary (SaaS)</h4>
+<blockquote>
+<p>The ROI table below assumes <strong>scaling after achieving product-market fit</strong> and transitioning to a SaaS/Freemium model.</p>
+</blockquote>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Initial Investment</td>
+          <td>$5,000</td>
+      </tr>
+      <tr>
+          <td>AWS Cost / Month</td>
+          <td>~$56</td>
+      </tr>
+      <tr>
+          <td>Revenue (100 users)</td>
+          <td>$2,000 / month</td>
+      </tr>
+      <tr>
+          <td>Net Profit</td>
+          <td>~$1,444 / month</td>
+      </tr>
+      <tr>
+          <td>Payback Period</td>
+          <td>~3.4 months</td>
+      </tr>
+      <tr>
+          <td>ROI (1 year)</td>
+          <td>~346%</td>
+      </tr>
+      <tr>
+          <td>Revenue (1,000 users)</td>
+          <td>$20,000 / month</td>
+      </tr>
+      <tr>
+          <td>AWS Cost (1,000 users)</td>
+          <td>~$180 / month</td>
+      </tr>
+      <tr>
+          <td>Profit Margin</td>
+          <td>~97% → ~99%</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>With ~55.75–71.75 USD/month, the system achieves <strong>High Availability (Multi-AZ)</strong> and <strong>automatic failover</strong>. If one Availability Zone fails, the system switches to another within seconds, ensuring continuous service.</p>
+</blockquote>
+<hr>
+<h3 id="3-solution-architecture">3. Solution Architecture</h3>
+<p>The system is built on Amazon Web Services using a cloud-native architecture. Amazon ECS Fargate is used to deploy the backend with a container-based serverless model, eliminating infrastructure management.</p>
+<p>The application follows a Multi-AZ deployment combined with Auto Scaling to ensure High Availability and flexible scalability during peak hours. Traffic is distributed via an Application Load Balancer (ALB).</p>
+<p>The frontend is hosted on Amazon S3 and delivered through CloudFront CDN to optimize latency. Security is enforced using AWS WAF, Amazon Cognito, and Security Groups for access control and protection.</p>
+<p>Data is stored in Amazon RDS (PostgreSQL), while Amazon ElastiCache (Redis) is used for caching and low-latency operations such as session management and voting, reducing backend load. Monitoring is handled by Amazon CloudWatch, and deployment is automated via CI/CD using GitHub Actions, integrated with Amazon ECR and AWS IAM.</p>
+<p><img src="/images/2-Proposal/lunchsync.png" alt="LunchSync Platform Architecture"></p>
+<p><em>AWS Services Used</em></p>
+<ul>
+<li><strong>Amazon ALB (Application Load Balancer):</strong> Distributes HTTP/HTTPS traffic to backend services.</li>
+<li><strong>Amazon ECS Fargate:</strong> Runs backend containers in a serverless model.</li>
+<li><strong>Amazon S3:</strong> Stores static assets and hosts the frontend.</li>
+<li><strong>Amazon CloudFront:</strong> CDN for low-latency content delivery.</li>
+<li><strong>Amazon Cognito:</strong> Handles authentication and user authorization.</li>
+<li><strong>AWS WAF (with CloudFront):</strong> Protects against common web attacks.</li>
+<li><strong>Amazon RDS (PostgreSQL):</strong> Stores relational data (users, restaurants, sessions, etc.).</li>
+<li><strong>Amazon ElastiCache (Redis):</strong> Caches hot data, processes voting, reduces system load.</li>
+<li><strong>Amazon CloudWatch:</strong> Monitoring (logs, metrics, alarms).</li>
+<li><strong>Amazon ECR:</strong> Stores Docker images for deployment.</li>
+<li><strong>AWS IAM:</strong> Manages permissions across services and CI/CD pipelines.</li>
+</ul>
+<hr>
+<h3 id="4-mvp-scope">4. MVP Scope</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>In Scope</th>
+          <th>Out of Scope</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Meal type</td>
+          <td>Lunch only</td>
+          <td>Dinner, breakfast, cafe</td>
+      </tr>
+      <tr>
+          <td>Platform</td>
+          <td>React Web App (mobile-first)</td>
+          <td>Native mobile app</td>
+      </tr>
+      <tr>
+          <td>Backend</td>
+          <td>ASP.NET Pragmatic Modular Monolith</td>
+          <td>Microservices</td>
+      </tr>
+      <tr>
+          <td>Database</td>
+          <td>PostgreSQL</td>
+          <td>NoSQL</td>
+      </tr>
+      <tr>
+          <td>Vector computation</td>
+          <td>In .NET (basic math)</td>
+          <td>Python external service</td>
+      </tr>
+      <tr>
+          <td>Group size</td>
+          <td>3–8 users</td>
+          <td>&gt;8</td>
+      </tr>
+      <tr>
+          <td>Auth</td>
+          <td>Host requires account (simple JWT - Cognito); participants join via nickname</td>
+          <td>Social login (if time allows)</td>
+      </tr>
+      <tr>
+          <td>Data</td>
+          <td>Manual curation</td>
+          <td>Auto-crawling</td>
+      </tr>
+      <tr>
+          <td>Geography</td>
+          <td>Single area (3–5 collections)</td>
+          <td>Multi-city</td>
+      </tr>
+      <tr>
+          <td>Monetization</td>
+          <td>Fully free</td>
+          <td>Paid plans</td>
+      </tr>
+      <tr>
+          <td>Dietary</td>
+          <td>No filtering</td>
+          <td>Vegan, allergy, halal</td>
+      </tr>
+      <tr>
+          <td>Restaurant action</td>
+          <td>Google Maps link</td>
+          <td>Reservation, review, ordering</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="5-roadmap--milestones">5. Roadmap &amp; Milestones</h3>
+<ul>
+<li>
+<p><em>Internship Phase (Jan–Mar):</em></p>
+<ul>
+<li>January: Learn AWS, explore infrastructure and technologies.</li>
+<li>February: Design and refine system architecture.</li>
+<li>March: Implement, test, and deploy.</li>
+</ul>
+</li>
+<li>
+<p><em>Post-deployment:</em></p>
+<ul>
+<li>Continue research and improvement for 1 year.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="6-budget-estimation">6. Budget Estimation</h3>
+<ul>
+<li><strong>Amazon Route 53:</strong> $0.50/month (1 Hosted Zone, &lt;10,000 queries)</li>
+<li><strong>AWS WAF:</strong> $7.60/month (1 WebACL, 2 basic rules, &lt;1M requests)</li>
+<li><strong>Amazon ECS (Fargate):</strong> $18.00/month (2 tasks running 24/7 across 2 AZs)</li>
+<li><strong>Amazon S3:</strong> $0.05/month (1 GB storage, &lt;10,000 requests)</li>
+<li><strong>Amazon CloudFront:</strong> $0.00/month (&lt;1 TB transfer – Always Free)</li>
+<li><strong>Amazon Cognito:</strong> $0.00/month (~100 MAU – Always Free)</li>
+<li><strong>Application Load Balancer (ALB):</strong> $0.00/month (Free Tier) (~$16/month after Free Tier)</li>
+<li><strong>Amazon RDS (PostgreSQL Multi-AZ):</strong> ~$18.00/month (replica + doubled storage)</li>
+<li><strong>Amazon ElastiCache (Redis Multi-AZ):</strong> ~$11.50/month (2 nodes, standby charged)</li>
+<li><strong>Amazon ECR:</strong> $0.00/month (&lt;500 MB storage)</li>
+<li><strong>Cross-AZ Data Transfer:</strong> ~$0.10/month</li>
+</ul>
+<hr>
+<h4 id="total-estimated-cost"><strong>Total Estimated Cost</strong></h4>
+<p><strong>~$55.75 – $71.75/month (~1,400,000 – 1,890,000 VND)</strong></p>
+<hr>
+<h3 id="7-risk-assessment">7. Risk Assessment</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Risk</th>
+          <th>Level</th>
+          <th>Mitigation Strategy</th>
+          <th>Contingency Strategy</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Infrastructure / Uptime (AZ failure)</strong></td>
+          <td>Low</td>
+          <td>Multi-AZ + ALB failover</td>
+          <td>Not required (handled by AWS)</td>
+      </tr>
+      <tr>
+          <td><strong>Security (DDoS, SQLi)</strong></td>
+          <td>Low</td>
+          <td>WAF + Cognito + Private Subnet</td>
+          <td>Rotate credentials, isolate system</td>
+      </tr>
+      <tr>
+          <td><strong>Deployment errors (prod bugs)</strong></td>
+          <td>Medium</td>
+          <td>CI/CD + automated tests</td>
+          <td>Rollback (ECS task revision)</td>
+      </tr>
+      <tr>
+          <td><strong>Cost overrun (spike)</strong></td>
+          <td>High 🔴</td>
+          <td>Auto Scaling limits, WAF rate limit</td>
+          <td>AWS Budgets + billing alarms</td>
+      </tr>
+      <tr>
+          <td><strong>Performance at scale</strong></td>
+          <td>Medium</td>
+          <td>Redis cache, CloudFront CDN</td>
+          <td>Scale DB / read replicas</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="8-expected-outcomes">8. Expected Outcomes</h3>
+<ul>
+<li><strong>Infrastructure:</strong> Cloud-native architecture (Multi-AZ, Auto Scaling) ensures high availability, scalability, and reduced downtime risk.</li>
+<li><strong>Operational Efficiency:</strong> Managed services (Fargate, RDS, CloudFront) reduce DevOps overhead, accelerate development, and optimize costs.</li>
+<li><strong>Financial Optimization:</strong> Low cost with high profit margins, enabling scalable growth without proportional cost increase.</li>
+</ul>
+<blockquote>
+<p>Build a stable, scalable SaaS platform with strong long-term growth potential and high cost efficiency.</p>
+</blockquote>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/1-worklog/1.12-week12/" title="Week 12 Worklog"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/3-eventparticipated/" title="Events Participated" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1775038776"></script>
+    <script src="/js/perfect-scrollbar.min.js?1775038776"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1775038776"></script>
+    <script src="/js/jquery.sticky.js?1775038776"></script>
+    <script src="/js/featherlight.min.js?1775038776"></script>
+    <script src="/js/highlight.pack.js?1775038776"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1775038776"></script>
+    <script src="/js/learn.js?1775038776"></script>
+    <script src="/js/hugo-learn.js?1775038776"></script>
+
+    <link href="/mermaid/mermaid.css?1775038776" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1775038776"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
