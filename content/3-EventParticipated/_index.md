@@ -5,11 +5,6 @@ weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
-date: 2026-03-20
-weight: 3
-chapter: false
-pre: " <b> 3. </b> "
----
 
 During my internship, I participated in three events. Each event was a valuable experience where I had the opportunity to listen, learn, and absorb new and insightful knowledge, helping me gain more ideas for organizing workshops in the future.
 
