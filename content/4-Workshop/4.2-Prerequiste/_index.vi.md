@@ -3,7 +3,7 @@ title : "Các bước chuẩn bị"
 date : 2026-03-20 
 weight : 2
 chapter : false
-pre : " <b> 5.2. </b> "
+pre : " <b> 4.2. </b> "
 ---
 
 #### IAM permissions
@@ -134,34 +134,34 @@ Gắn IAM permission policy sau vào tài khoản aws user của bạn để tri
                 "logs:DeleteLogGroup",
                 "logs:DescribeLogGroups",
                 "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
+                "route43:ChangeTagsForResource",
+                "route43:CreateHealthCheck",
+                "route43:CreateHostedZone",
+                "route43:CreateTrafficPolicy",
+                "route43:DeleteHostedZone",
+                "route43:DisassociateVPCFromHostedZone",
+                "route43:GetHostedZone",
+                "route43:ListHostedZones",
+                "route43domains:ListDomains",
+                "route43domains:ListOperations",
+                "route43domains:ListTagsForDomain",
+                "route43resolver:AssociateResolverEndpointIpAddress",
+                "route43resolver:AssociateResolverRule",
+                "route43resolver:CreateResolverEndpoint",
+                "route43resolver:CreateResolverRule",
+                "route43resolver:DeleteResolverEndpoint",
+                "route43resolver:DeleteResolverRule",
+                "route43resolver:DisassociateResolverEndpointIpAddress",
+                "route43resolver:DisassociateResolverRule",
+                "route43resolver:GetResolverEndpoint",
+                "route43resolver:GetResolverRule",
+                "route43resolver:ListResolverEndpointIpAddresses",
+                "route43resolver:ListResolverEndpoints",
+                "route43resolver:ListResolverRuleAssociations",
+                "route43resolver:ListResolverRules",
+                "route43resolver:ListTagsForResource",
+                "route43resolver:UpdateResolverEndpoint",
+                "route43resolver:UpdateResolverRule",
                 "s3:AbortMultipartUpload",
                 "s3:CreateBucket",
                 "s3:DeleteBucket",
@@ -222,21 +222,21 @@ Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
 
 Để chuẩn bị cho môi trường làm workshop, chúng ta deploy CloudFormation template sau (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Để nguyên các lựa chọn mặc định.
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
+![create stack](/images/4-Workshop/4.2-Prerequisite/create-stack1.png)
 
 + Lựa chọn 2 mục acknowledgement 
 + Chọn Create stack
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
+![create stack](/images/4-Workshop/4.2-Prerequisite/create-stack2.png)
 
-Quá trình triển khai CloudFormation cần khoảng 15 phút để hoàn thành.
+Quá trình triển khai CloudFormation cần khoảng 14 phút để hoàn thành.
 
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
+![complete](/images/4-Workshop/4.2-Prerequisite/complete.png)
 
 + 2 VPCs đã được tạo
 
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
+![vpcs](/images/4-Workshop/4.2-Prerequisite/vpcs.png)
 
 + 3 EC2s đã được tạo
 
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+![EC2](/images/4-Workshop/4.2-Prerequisite/ec2.png)

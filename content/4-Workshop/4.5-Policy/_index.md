@@ -1,9 +1,9 @@
 ---
 title : "VPC Endpoint Policies"
 date : 2026-03-20
-weight : 5
+weight : 4
 chapter : false
-pre : " <b> 5.5. </b> "
+pre : " <b> 4.4. </b> "
 ---
 
 When you create an interface or gateway endpoint, you can attach an endpoint policy to it that controls access to the service to which you are connecting. A VPC endpoint policy is an IAM resource policy that you attach to an endpoint. If you do not attach a policy when you create an endpoint, AWS attaches a default policy for you that allows full access to the service through the endpoint.
@@ -12,7 +12,7 @@ You can create a policy that restricts access to specific S3 buckets only. This 
 
 In this section you will create a VPC endpoint policy that restricts access to the S3 bucket specified in the VPC endpoint policy.
 
-![endpoint diagram](/images/5-Workshop/5.5-Policy/s3-bucket-policy.png)
+![endpoint diagram](/images/4-Workshop/4.4-Policy/s3-bucket-policy.png)
 
 #### Connect to an EC2 instance and verify connectivity to S3
 
@@ -21,21 +21,21 @@ In this section you will create a VPC endpoint policy that restricts access to t
 ```
 aws s3 ls s3://\<your-bucket-name\>
 ```
-![test](/images/5-Workshop/5.5-Policy/test1.png)
+![test](/images/4-Workshop/4.4-Policy/test1.png)
 
 The bucket contents include the two 1 GB files uploaded in earlier.
 
 2. Create a new S3 bucket; follow the naming pattern you used in Part 1, but add a '-2' to the name. Leave other fields as default and click create
 
-![create bucket](/images/5-Workshop/5.5-Policy/create-bucket.png)
+![create bucket](/images/4-Workshop/4.4-Policy/create-bucket.png)
 
 Successfully create bucket
 
-![Success](/images/5-Workshop/5.5-Policy/create-bucket-success.png)
+![Success](/images/4-Workshop/4.4-Policy/create-bucket-success.png)
 
 3. Navigate to: Services > VPC > Endpoints, then select the Gateway VPC endpoint you created earlier. Click the Policy tab. Click Edit policy.
 
-![policy](/images/5-Workshop/5.5-Policy/policy1.png)
+![policy](/images/4-Workshop/4.4-Policy/policy1.png)
 
 The default policy allows access to all S3 Buckets through the VPC endpoint.
 
@@ -43,11 +43,11 @@ The default policy allows access to all S3 Buckets through the VPC endpoint.
 
 ```
 {
-  "Id": "Policy1631305502445",
+  "Id": "Policy1631304402444",
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "Stmt1631305501021",
+      "Sid": "Stmt1631304401021",
       "Action": "s3:*",
       "Effect": "Allow",
       "Resource": [
@@ -60,35 +60,35 @@ The default policy allows access to all S3 Buckets through the VPC endpoint.
 }
 ```
 
-![custom policy](/images/5-Workshop/5.5-Policy/policy2.png)
+![custom policy](/images/4-Workshop/4.4-Policy/policy2.png)
 
 Successfully customize policy
 
-![success](/static/images/5-Workshop/5.5-Policy/success.png)
+![success](/static/images/4-Workshop/4.4-Policy/success.png)
 
-5. From your session on the Test-Gateway-Endpoint instance, test access to the S3 bucket you created in Part 1: Access S3 from VPC
+4. From your session on the Test-Gateway-Endpoint instance, test access to the S3 bucket you created in Part 1: Access S3 from VPC
 ```
 aws s3 ls s3://<yourbucketname>
 ```
 
 This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy:
 
-![error](/static/images/5-Workshop/5.5-Policy/error.png)
+![error](/static/images/4-Workshop/4.4-Policy/error.png)
 
 6. Return to your home directory on your EC2 instance ` cd~ `
 
 + Create a file ```fallocate -l 1G test-bucket2.xyz ```
 + Copy file to 2nd bucket ```aws s3 cp test-bucket2.xyz s3://<your-2nd-bucket-name>```
 
-![success](/static/images/5-Workshop/5.5-Policy/test2.png)
+![success](/static/images/4-Workshop/4.4-Policy/test2.png)
 
 This operation succeeds because it is permitted by the VPC endpoint policy.
 
-![success](/static/images/5-Workshop/5.5-Policy/test2-success.png)
+![success](/static/images/4-Workshop/4.4-Policy/test2-success.png)
 
 + Then we test access to the first bucket by copy the file to 1st bucket `aws s3 cp test-bucket2.xyz s3://<your-1st-bucket-name>`
 
-![fail](/static/images/5-Workshop/5.5-Policy/test2-fail.png)
+![fail](/static/images/4-Workshop/4.4-Policy/test2-fail.png)
 
 This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy.
 

@@ -3,7 +3,7 @@ title : "Prerequiste"
 date : 2026-03-20 
 weight : 2 
 chapter : false
-pre : " <b> 5.2. </b> "
+pre : " <b> 4.2. </b> "
 ---
 
 #### IAM permissions
@@ -134,34 +134,34 @@ Add the following IAM permission policy to your user account to deploy and clean
                 "logs:DeleteLogGroup",
                 "logs:DescribeLogGroups",
                 "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
+                "route43:ChangeTagsForResource",
+                "route43:CreateHealthCheck",
+                "route43:CreateHostedZone",
+                "route43:CreateTrafficPolicy",
+                "route43:DeleteHostedZone",
+                "route43:DisassociateVPCFromHostedZone",
+                "route43:GetHostedZone",
+                "route43:ListHostedZones",
+                "route43domains:ListDomains",
+                "route43domains:ListOperations",
+                "route43domains:ListTagsForDomain",
+                "route43resolver:AssociateResolverEndpointIpAddress",
+                "route43resolver:AssociateResolverRule",
+                "route43resolver:CreateResolverEndpoint",
+                "route43resolver:CreateResolverRule",
+                "route43resolver:DeleteResolverEndpoint",
+                "route43resolver:DeleteResolverRule",
+                "route43resolver:DisassociateResolverEndpointIpAddress",
+                "route43resolver:DisassociateResolverRule",
+                "route43resolver:GetResolverEndpoint",
+                "route43resolver:GetResolverRule",
+                "route43resolver:ListResolverEndpointIpAddresses",
+                "route43resolver:ListResolverEndpoints",
+                "route43resolver:ListResolverRuleAssociations",
+                "route43resolver:ListResolverRules",
+                "route43resolver:ListTagsForResource",
+                "route43resolver:UpdateResolverEndpoint",
+                "route43resolver:UpdateResolverRule",
                 "s3:AbortMultipartUpload",
                 "s3:CreateBucket",
                 "s3:DeleteBucket",
@@ -222,21 +222,21 @@ In this lab, we will use **N.Virginia region (us-east-1)**.
 
 To prepare the workshop environment, deploy this **CloudFormation Template** (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Accept all of the defaults when deploying the template. 
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
+![create stack](/images/4-Workshop/4.2-Prerequisite/create-stack1.png)
 
 + Tick 2 acknowledgement boxes
 + Choose **Create stack**
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
+![create stack](/images/4-Workshop/4.2-Prerequisite/create-stack2.png)
 
-The **ClouddFormation** deployment requires about 15 minutes to complete.
+The **ClouddFormation** deployment requires about 14 minutes to complete.
 
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
+![complete](/images/4-Workshop/4.2-Prerequisite/complete.png)
 
 + **2 VPCs** have been created
 
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
+![vpcs](/images/4-Workshop/4.2-Prerequisite/vpcs.png)
 
 + **3 EC2s** have been created
 
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+![EC2](/images/4-Workshop/4.2-Prerequisite/ec2.png)
