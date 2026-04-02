@@ -6,14 +6,32 @@ chapter : false
 pre : " <b> 4.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Tổng quan Workshop
+Workshop này hướng dẫn xây dựng và triển khai một hệ thống ứng dụng web hiện đại (LunchSync) trên nền tảng AWS, tập trung vào kiến trúc container-based serverless và quy trình CI/CD tự động hóa.
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+- Lộ trình nội dung chính bao gồm:
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+    - Thiết lập hạ tầng mạng & Bảo mật: Sử dụng VPC với các Private Subnet, bảo vệ ứng dụng bằng AWS WAF và xác thực người dùng qua Amazon Cognito.
 
-![overview](/images/4-Workshop/4.1-Workshop-overview/diagram1.png)
+    - Triển khai Frontend: Hosting trang web tĩnh trên S3, phân phối qua CloudFront để tối ưu tốc độ và quản lý tên miền bằng Route 53.
+
+    - Vận hành Backend: Sử dụng container hóa với Docker, lưu trữ trên ECR và chạy trên AWS Fargate (ECS) để tự động co giãn theo tải thực tế.
+
+    - Lưu trữ dữ liệu: Kết nối với cơ sở dữ liệu PostgreSQL và bộ nhớ đệm Redis để tối ưu hiệu năng truy vấn.
+
+    - Tự động hóa (DevOps): Xây dựng luồng CI/CD hoàn chỉnh qua GitHub Actions, giúp tự động build code, đẩy ảnh container và cập nhật dịch vụ ngay khi có thay đổi từ phía lập trình viên.
+
+#### Giới thiệu hạ tầng
+- **Amazon ALB (Application Load Balancer)**: Phân phối lưu lượng HTTP/HTTPS đến các service backend.  
+- **Amazon ECS Fargate**: Chạy container backend theo mô hình serverless.  
+- **Amazon S3**: Lưu trữ static assets và host frontend.  
+- **Amazon CloudFront**: CDN phân phối nội dung frontend và hình ảnh với độ trễ thấp.  
+- **Amazon Cognito**: Quản lý xác thực và phân quyền người dùng.  
+- **WAF tích hợp CloudFront**: Bảo vệ hệ thống khỏi các tấn công web phổ biến.  
+- **Amazon RDS (PostgreSQL)**: Lưu trữ dữ liệu quan hệ (user, restaurant, session, v.v.).  
+- **Amazon ElastiCache (Redis)**: Cache dữ liệu nóng, xử lý voting và giảm tải hệ thống.  
+- **Amazon CloudWatch**: Giám sát hệ thống (logs, metrics, alarms).  
+- **Amazon ECR**: Lưu trữ Docker images phục vụ deployment.  
+- **AWS IAM**: Quản lý quyền truy cập giữa các service và pipeline CI/CD. 
+
+
