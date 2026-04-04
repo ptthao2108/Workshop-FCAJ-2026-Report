@@ -2,6 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-ecr-fargate/4.6.1-cicdpipeline-ecr/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.6-ecr-fargate/4.6.1-cicdpipeline-ecr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-ecr-fargate/4.6.1-cicdpipeline-ecr/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.1-workshop-overview/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.1-workshop-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.1-workshop-overview/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/4.5.1-rds/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.5-database-caching/4.5.1-rds/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/4.5.1-rds/"
+                />
+  </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/3.3-event3/</loc>
     <lastmod>2026-03-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -26,19 +65,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.1-prepare/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.4-ecr-fargate/5.4.1-prepare/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.1-prepare/"
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/3.1-event1/</loc>
@@ -67,19 +93,6 @@
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/3.2-event2/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.1-workshop-overview/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.1-workshop-overview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.1-workshop-overview/"
-                />
-  </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/1-worklog/</loc>
     <lastmod>2026-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -91,19 +104,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/1-worklog/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-s3-cloudfront/5.3.1-create-gwe/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.3-s3-cloudfront/5.3.1-create-gwe/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-s3-cloudfront/5.3.1-create-gwe/"
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/1-worklog/1.1-week1/</loc>
@@ -223,6 +223,45 @@
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/1-worklog/1.9-week9/"
                 />
   </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.2-route53-acm-cognito/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.2-route53-acm-cognito/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.2-route53-acm-cognito/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-ecr-fargate/4.6.2-ecs/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.6-ecr-fargate/4.6.2-ecs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-ecr-fargate/4.6.2-ecs/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/4.5.2-redis/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.5-database-caching/4.5.2-redis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/4.5.2-redis/"
+                />
+  </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/2-proposal/</loc>
     <lastmod>2026-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -234,45 +273,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/2-proposal/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.2-prerequiste/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.2-prerequiste/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.2-prerequiste/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-s3-cloudfront/5.3.2-test-gwe/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.3-s3-cloudfront/5.3.2-test-gwe/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-s3-cloudfront/5.3.2-test-gwe/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.2-create-interface-enpoint/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.4-ecr-fargate/5.4.2-create-interface-enpoint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.2-create-interface-enpoint/"
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/1-worklog/1.10-week10/</loc>
@@ -314,6 +314,19 @@
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/1-worklog/1.12-week12/"
                 />
   </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-vpc-securitygroup-alb/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.3-vpc-securitygroup-alb/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-vpc-securitygroup-alb/"
+                />
+  </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/</loc>
     <lastmod>2026-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -327,73 +340,34 @@
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.3-test-endpoint/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/3.4-event4/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.4-ecr-fargate/5.4.3-test-endpoint/"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/3-eventparticipated/3.4-event4/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.3-test-endpoint/"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/3-eventparticipated/3.4-event4/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-s3-cloudfront/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-s3-cloudfront/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.3-s3-cloudfront/"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.4-s3-cloudfront/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.3-s3-cloudfront/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.4-ecr-fargate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.5-database-caching/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-demo-logs/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.6-demo-logs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-demo-logs/"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-s3-cloudfront/"
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -405,17 +379,17 @@
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/"
                 />
   </url><url>
-    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.4-dns-simulation/</loc>
-    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.4-ecr-fargate/5.4.4-dns-simulation/"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.5-database-caching/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.4-ecr-fargate/5.4.4-dns-simulation/"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.5-database-caching/"
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/5-self-evaluation/</loc>
@@ -429,6 +403,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/5-self-evaluation/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-ecr-fargate/</loc>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/4-workshop/4.6-ecr-fargate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.6-ecr-fargate/"
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/6-feedback/</loc>
@@ -445,7 +432,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/Workshop-FCAJ-2026-Report/vi/4-workshop/4.7-cleanup/</loc>
-    <lastmod>2026-03-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
