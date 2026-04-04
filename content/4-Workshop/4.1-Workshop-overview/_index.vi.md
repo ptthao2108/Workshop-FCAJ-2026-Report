@@ -23,7 +23,7 @@ Hệ thống LunchSync được triển khai trên AWS với các thành phần 
 
 #### Workshop Architecture
 
-![Workshop architecture](/images/proposal/lunchsync.png)
+![Workshop architecture](/images/2-Proposal/lunchsync.png)
 
 #### Tổng quan về Workshop
 

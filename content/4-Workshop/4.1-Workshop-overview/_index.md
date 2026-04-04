@@ -23,7 +23,7 @@ The LunchSync system is deployed on AWS with the following main components:
 
 #### Workshop Architecture
 
-![Workshop architecture](/images/proposal/lunchsync.png)
+![Workshop architecture](/images/2-Proposallunchsync.png)
 
 #### Workshop overview
 
