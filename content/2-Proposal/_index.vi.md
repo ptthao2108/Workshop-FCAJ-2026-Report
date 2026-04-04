@@ -91,7 +91,8 @@ Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon 
 - **Amazon ElastiCache (Redis)**: Cache dữ liệu nóng, xử lý voting và giảm tải hệ thống.  
 - **Amazon CloudWatch**: Giám sát hệ thống (logs, metrics, alarms).  
 - **Amazon ECR**: Lưu trữ Docker images phục vụ deployment.  
-- **AWS IAM**: Quản lý quyền truy cập giữa các service và pipeline CI/CD. 
+- **AWS IAM**: Quản lý quyền truy cập giữa các service và pipeline CI/CD.
+- **AWS Secrets Manager**: Quản lý các tài khoản, mật khẩu kết nối đến Cognito, RDS, Redis 
 
 ### 4. Scope MVP
 
@@ -109,15 +110,52 @@ Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon 
 | Monetization       | Free toàn bộ                                                            | Paid plans                       |
 | Dietary            | Không filter                                                            | Chay, dị ứng, halal              |
 | Restaurant action  | Google Maps link                                                        | Đặt bàn, review, gọi quán        |
+### 5. Tech Stack
+| Layer           | Technology                               | Hosting                         |
+| --------------- | ---------------------------------------- | ------------------------------- |
+| Frontend        | React + TypeScript + Vite + Tailwind CSS | S3 + CloudFront                 |
+| Backend         | ASP.NET Web API + EF Core                | ECS Fargate                     |
+| Database        | PostgreSQL 15+                           | AWS RDS (db.t3.micro Free Tier) |
+| Media Storage   | —                                        | AWS S3                          |
+| Auth (Phase 1)  | Simple JWT                               | Amazon Cognito                  |
+| CI/CD           | GitHub Actions                           | Build + Deploy                  |
+| Version Control | Git — GitHub                             | —                               |
 
-### 5. Lộ trình & Mốc triển khai  
+### 6. Key Features
+
+Group Voting Lunch Restaurant Flow 
+PHASE 0: SETUP (1 người host)
+- Tạo group session (3–8 người)
+- Set trần giá (ví dụ 50k/người)
+- Chọn Landmark-based Lunch Collection → load top 3 collection và chọn
+
+PHASE 1: INDIVIDUAL BINARY CHOICE
+- Cung cấp một bộ lấy từ trong pool binary choice có sẵn(20-30)
+- Mỗi người tham gia trả lời cùng một bộ fixed 7–12 binary choice
+- Hoàn thành trả lời bộ binary choice, từ mỗi participant tạo ra 1 preference vector có các tiêu chí bị ảnh hưởng bởi từng lựa chọn trong khi trả lời.
+
+PHASE 2: AGGREGATE & SUGGEST (hệ thống xử lý)
+- Gộp các preference vectors thành final vector đại diện cho session đó
+- Scoring toàn bộ dish pool có top 10 dishes
+- **Filter:** Chỉ giữ dishes mà tồn tại quán trong collection có phục vụ
+- Đưa ra top 3 món
+
+PHASE 3: RESTAURANT MATCHING (hệ thống gợi ý)
+- Matching và ranking quán theo: Collection + trần giá
+- Gợi ý top 5 quán phù hợp có cover (nhiều) món trong top.
+
+PHASE 4: GROUP PICK
+- Từ top 5 quán → nhóm veto 2 quán → quyết định chốt 1 quán cuối cùng để đi ăn.
+- Có thể voting hoặc host quyết 
+
+### 7. Lộ trình & Mốc triển khai  
 - *Thực tập (Tháng 1–3)*:  
     - Tháng 1: Học AWS tìm hiểu hạ tầng và kỹ thuật.  
     - Tháng 2: Thiết kế và điều chỉnh kiến trúc cho phù hợp.  
     - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
 - *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
 
-### 6. Ước tính ngân sách  
+### 8. Ước tính ngân sách  
 
 - **Amazon Route 53**: 0,50 USD/tháng (1 Hosted Zone, <10.000 query)  
 - **AWS WAF**: 7,60 USD/tháng (1 WebACL, 2 rules cơ bản, <1 triệu request)  
@@ -136,7 +174,7 @@ Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon 
 #### **Tổng chi phí ước tính**
 **~55,75 - 71,75 USD/tháng (~1.400.000 ~ 1.890.000 VNĐ)**    
 
-### 7. Đánh giá rủi ro  
+### 9. Đánh giá rủi ro  
 | Rủi ro                                  | Mức độ     | Chiến lược giảm thiểu (Mitigation) | Chiến lược dự phòng (Contingency)    |
 | --------------------------------------- | ---------- | ---------------------------------- | ------------------------------------ |
 | **Hạ tầng / Uptime** (AZ failure)       | Thấp       | Multi-AZ + ALB failover            | Không cần (AWS tự xử lý)             |
@@ -146,7 +184,7 @@ Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon 
 | **Hiệu năng khi scale**                 | Trung bình | Cache Redis, CDN CloudFront        | Scale DB / read replica              |
   
 
-### 8. Kết quả kỳ vọng  
+### 10. Kết quả kỳ vọng  
 - Hạ tầng: Kiến trúc cloud-native (Multi-AZ, Auto Scaling) giúp hệ thống đạt high availability, dễ mở rộng và giảm rủi ro downtime.
 - Hiệu quả vận hành: Sử dụng managed services (Fargate, RDS, CloudFront) giúp giảm tải DevOps, tăng tốc phát triển và tối ưu chi phí.
 - Tối ưu tài chính: Chi phí thấp nhưng biên lợi nhuận cao, tạo nền tảng tốt để scale mà không làm tăng chi phí tương ứng.

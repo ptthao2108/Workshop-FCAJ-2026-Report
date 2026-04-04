@@ -36,3 +36,12 @@ During my internship, I participated in three events. Each event was a valuable 
 &emsp;**Location:** 26th Floor, Bitexco Tower, No. 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City  
 
 &emsp;**Role:** Attendee  
+
+### [Event 4](3.3-Event4/)
+&emsp;**Event Name:** FCloud Native & Infrastructure - Kubernetes, Elixir & IaC  
+
+&emsp;**Time:** 09:00 AM, March 21, 2026  
+
+&emsp;**Location:** 5th Floor, Hall Academe FPT Campus Ho Chi Minh City  
+
+&emsp;**Role:** Attendee  

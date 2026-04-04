@@ -38,4 +38,12 @@ Trong quá trình thực tập, mình đã tham gia 3 events, với mỗi event 
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
+### [Event 4](3.4-Event4/)
+&emsp;**Tên sự kiện:** Cloud Native & Infrastructure - Kubernetes, Elixir & IaC
+
+&emsp;**Thời gian:** 09:00 ngày 21/03/2026
+
+&emsp;**Địa điểm:** Tầng 5, Hall Academe, FPT Campus thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự 
 
