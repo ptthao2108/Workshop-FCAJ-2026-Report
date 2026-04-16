@@ -49,8 +49,12 @@ pre: " <b> 2. </b> "
 - **Hiệu năng:** Khả năng scale linh hoạt theo giờ cao điểm, độ trễ thấp nhờ CDN và caching.  
 - **Tập trung phát triển:** Sử dụng managed services → giảm gánh nặng vận hành (Ops), tăng tốc phát triển MVP.  
 
-- **Chi phí hạ tầng (Baseline):**  
-  - ~55,75 USD/tháng (~1.400.000 VNĐ) cho các dịch vụ cốt lõi (Fargate, WAF, Route 53, Multi-AZ).   
+- **Chi phí:**  
+  - Nhóm cốt lõi: ~$78.42/tháng (~2.000.000 VNĐ) cho Fargate, RDS, ElastiCache với Multi-AZ.
+  - Nhóm Hạ tầng & Bảo mật (~$131/tháng): 
+    - VPC Endpoints ($94.90): "Đường ống" bảo mật nội bộ.
+    - ALB & Public IPs (~$24.00): "Cửa ngõ" đón khách.
+    - Khác (WAF, Logs, Route53...): ~$12.00.   
   
 #### ROI Summary (SaaS)
 + > Bảng ROI dưới đây là **giả định scaling** khi chuyển sang 
@@ -59,15 +63,15 @@ pre: " <b> 2. </b> "
 | Chỉ số                    | Giá trị         |
 | ------------------------- | --------------- |
 | Vốn đầu tư ban đầu        | $5.000          |
-| Chi phí AWS / tháng       | ~$56            |
+| Chi phí AWS / tháng       | ~$210            |
 | Doanh thu (100 users)     | $2.000 / tháng  |
-| Lợi nhuận ròng            | ~$1.444 / tháng |
-| Thời gian hoàn vốn        | ~3.4 tháng      |
-| ROI (1 năm)               | ~346%           |
+| Lợi nhuận ròng            | ~$1.290 / tháng |
+| Thời gian hoàn vốn        | ~3.9 tháng      |
+| ROI (1 năm)               | ~309%           |
 | Doanh thu (1.000 users)   | $20.000 / tháng |
-| Chi phí AWS (1.000 users) | ~$180 / tháng   |
-| Biên lợi nhuận            | ~97% → ~99%     |
-  > Với chi phí ~55,75 - 71,75 USD/tháng, hệ thống đạt mức **High Availability (Multi-AZ)** và khả năng **failover tự động**. Khi một Availability Zone gặp sự cố, hệ thống sẽ chuyển sang AZ còn lại trong vài giây, đảm bảo dịch vụ hoạt động liên tục.   
+| Chi phí AWS (1.000 users) | ~$350 / tháng   |
+| Biên lợi nhuận            | ~93% - 98%     |
+  > Với chi phí ~$210.12/tháng, hệ thống đạt mức **High Availability (Multi-AZ)** và khả năng **failover tự động**. Khi một Availability Zone gặp sự cố, hệ thống sẽ chuyển sang AZ còn lại trong vài giây, đảm bảo dịch vụ hoạt động liên tục.   
 
 ### 3. Kiến trúc giải pháp  
 Hệ thống được xây dựng trên nền tảng Amazon Web Services theo kiến trúc cloud-native, sử dụng Amazon ECS Fargate để triển khai backend theo mô hình container-based serverless, không cần quản lý hạ tầng.
@@ -80,7 +84,7 @@ Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon 
 
 ![LunchSync Platform Architecture](/images/2-Proposal/lunchsync.png)
 
-*Dịch vụ AWS sử dụng*  
+#### Dịch vụ AWS sử dụng  
 - **Amazon ALB (Application Load Balancer)**: Phân phối lưu lượng HTTP/HTTPS đến các service backend.  
 - **Amazon ECS Fargate**: Chạy container backend theo mô hình serverless.  
 - **Amazon S3**: Lưu trữ static assets và host frontend.  
@@ -93,6 +97,7 @@ Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon 
 - **Amazon ECR**: Lưu trữ Docker images phục vụ deployment.  
 - **AWS IAM**: Quản lý quyền truy cập giữa các service và pipeline CI/CD.
 - **AWS Secrets Manager**: Quản lý các tài khoản, mật khẩu kết nối đến Cognito, RDS, Redis 
+- **VPC Endpoint**: Kết nối an toàn các tài nguyên trong ptrivate subnet vs dịch vụ ngoài vpc
 
 ### 4. Scope MVP
 
@@ -157,22 +162,28 @@ PHASE 4: GROUP PICK
 
 ### 8. Ước tính ngân sách  
 
-- **Amazon Route 53**: 0,50 USD/tháng (1 Hosted Zone, <10.000 query)  
-- **AWS WAF**: 7,60 USD/tháng (1 WebACL, 2 rules cơ bản, <1 triệu request)  
-- **Amazon ECS (Fargate)**: 18,00 USD/tháng (2 tasks chạy 24/7 trên 2 AZs)  
-- **Amazon S3**: 0,05 USD/tháng (1 GB storage, <10.000 request)  
-- **Amazon CloudFront**: 0,00 USD/tháng (<1 TB data transfer – Always Free)  
-- **Amazon Cognito**: 0,00 USD/tháng (~100 MAU – Always Free)  
-- **Application Load Balancer (ALB)**: 0,00 USD/tháng (Free Tier) (~16,00 USD/tháng sau Free Tier) 
-- **Amazon RDS (PostgreSQL Multi-AZ)**: ~18,00 USD/tháng (node phụ + storage nhân đôi)  
-- **Amazon ElastiCache (Redis Multi-AZ)**: ~11,50 USD/tháng (2 nodes, trả phí node phụ)  
-- **Amazon ECR**: 0,00 USD/tháng (<500 MB storage)  
-- **Cross-AZ Data Transfer**: ~0,10 USD/tháng  
+### Bảng Chi Phí Hệ Thống Full 2 AZ (30 ngày)
+
+| Nhóm Dịch Vụ  | Thành phần (Multi-AZ)      | Cách tính chi tiết                          | Chi phí (USD/Tháng)    |
+| ------------- | -------------------------- | ------------------------------------------- | ---------------------- |
+| VPC Endpoint  | 5 Interface Endpoints      | 5 loại × 2 AZs × 730h × $0.013              | $94.90                 |
+| Load Balancer | ALB + 2 Public IPs         | ($0.0225 + $0.01 cho 2 IP) × 730h           | $23.72                 |
+| Compute       | ECS Fargate                | 2 Tasks (0.25 vCPU - 0.5GB)                 | $19.00                 |
+| Database      | RDS PostgreSQL             | t3.micro (Multi-AZ: 2 nodes + 20GB Storage) | $30.00 - $34.00        |
+| Cache         | ElastiCache Redis          | t3.micro (Multi-AZ: 2 nodes)                | $24.00 - $26.00        |
+| Monitoring    | CloudWatch + WAF + Secrets | Lưu lượng thấp/cơ bản                       | $10.50                 |
+| Khác          | Route53, S3, ECR, Cognito  | Phí duy trì                                 | $2.00                  |
+| **TỔNG CỘNG** |                            |                                             | **~$204.12 - $210.12** |
 
 ---
 
-#### **Tổng chi phí ước tính**
-**~55,75 - 71,75 USD/tháng (~1.400.000 ~ 1.890.000 VNĐ)**    
+### Đánh giá
+
+- **Mức độ chịu lỗi:** Cực cao. Hệ thống có thể chịu được việc một Availability Zone (AZ) của AWS bị gián đoạn hoàn toàn mà ứng dụng vẫn hoạt động bình thường.
+
+- **Bảo mật:** Tối ưu cao trên Cloud hiện nay (sử dụng private subnet hoàn toàn, không có Public IP, toàn bộ traffic đi qua PrivateLink).
+
+- **Chi phí:** Khoảng **5,2 triệu VNĐ/tháng**.    
 
 ### 9. Đánh giá rủi ro  
 | Rủi ro                                  | Mức độ     | Chiến lược giảm thiểu (Mitigation) | Chiến lược dự phòng (Contingency)    |

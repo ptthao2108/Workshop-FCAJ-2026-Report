@@ -15,21 +15,21 @@
     <title>Bản đề xuất :: Báo cáo thực tập</title>
 
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1775310449" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1775310449" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1776382823" rel="stylesheet">
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1775310449" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1776382823" rel="stylesheet">
     
     
 
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1775310449"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1776382823"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1775310449"></script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1775310449"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1776382823"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1776382823"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/Workshop-FCAJ-2026-Report\/\/vi";
     
 </script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1775310449"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1776382823"></script>
  
   </div>
 
@@ -841,6 +841,8 @@
         <li><a href="#6-key-features">6. Key Features</a></li>
         <li><a href="#7-lộ-trình--mốc-triển-khai">7. Lộ trình &amp; Mốc triển khai</a></li>
         <li><a href="#8-ước-tính-ngân-sách">8. Ước tính ngân sách</a></li>
+        <li><a href="#bảng-chi-phí-hệ-thống-full-2-az-30-ngày">Bảng Chi Phí Hệ Thống Full 2 AZ (30 ngày)</a></li>
+        <li><a href="#đánh-giá">Đánh giá</a></li>
         <li><a href="#9-đánh-giá-rủi-ro">9. Đánh giá rủi ro</a></li>
         <li><a href="#10-kết-quả-kỳ-vọng">10. Kết quả kỳ vọng</a></li>
       </ul>
@@ -945,9 +947,16 @@
 <p><strong>Tập trung phát triển:</strong> Sử dụng managed services → giảm gánh nặng vận hành (Ops), tăng tốc phát triển MVP.</p>
 </li>
 <li>
-<p><strong>Chi phí hạ tầng (Baseline):</strong></p>
+<p><strong>Chi phí:</strong></p>
 <ul>
-<li>~55,75 USD/tháng (~1.400.000 VNĐ) cho các dịch vụ cốt lõi (Fargate, WAF, Route 53, Multi-AZ).</li>
+<li>Nhóm cốt lõi: ~$78.42/tháng (~2.000.000 VNĐ) cho Fargate, RDS, ElastiCache với Multi-AZ.</li>
+<li>Nhóm Hạ tầng &amp; Bảo mật (~$131/tháng):
+<ul>
+<li>VPC Endpoints ($94.90): &ldquo;Đường ống&rdquo; bảo mật nội bộ.</li>
+<li>ALB &amp; Public IPs (~$24.00): &ldquo;Cửa ngõ&rdquo; đón khách.</li>
+<li>Khác (WAF, Logs, Route53&hellip;): ~$12.00.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -978,7 +987,7 @@
       </tr>
       <tr>
           <td>Chi phí AWS / tháng</td>
-          <td>~$56</td>
+          <td>~$210</td>
       </tr>
       <tr>
           <td>Doanh thu (100 users)</td>
@@ -986,15 +995,15 @@
       </tr>
       <tr>
           <td>Lợi nhuận ròng</td>
-          <td>~$1.444 / tháng</td>
+          <td>~$1.290 / tháng</td>
       </tr>
       <tr>
           <td>Thời gian hoàn vốn</td>
-          <td>~3.4 tháng</td>
+          <td>~3.9 tháng</td>
       </tr>
       <tr>
           <td>ROI (1 năm)</td>
-          <td>~346%</td>
+          <td>~309%</td>
       </tr>
       <tr>
           <td>Doanh thu (1.000 users)</td>
@@ -1002,16 +1011,16 @@
       </tr>
       <tr>
           <td>Chi phí AWS (1.000 users)</td>
-          <td>~$180 / tháng</td>
+          <td>~$350 / tháng</td>
       </tr>
       <tr>
           <td>Biên lợi nhuận</td>
-          <td>~97% → ~99%</td>
+          <td>~93% - 98%</td>
       </tr>
   </tbody>
 </table>
 <blockquote>
-<p>Với chi phí ~55,75 - 71,75 USD/tháng, hệ thống đạt mức <strong>High Availability (Multi-AZ)</strong> và khả năng <strong>failover tự động</strong>. Khi một Availability Zone gặp sự cố, hệ thống sẽ chuyển sang AZ còn lại trong vài giây, đảm bảo dịch vụ hoạt động liên tục.</p>
+<p>Với chi phí ~$210.12/tháng, hệ thống đạt mức <strong>High Availability (Multi-AZ)</strong> và khả năng <strong>failover tự động</strong>. Khi một Availability Zone gặp sự cố, hệ thống sẽ chuyển sang AZ còn lại trong vài giây, đảm bảo dịch vụ hoạt động liên tục.</p>
 </blockquote>
 <h3 id="3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</h3>
 <p>Hệ thống được xây dựng trên nền tảng Amazon Web Services theo kiến trúc cloud-native, sử dụng Amazon ECS Fargate để triển khai backend theo mô hình container-based serverless, không cần quản lý hạ tầng.</p>
@@ -1019,7 +1028,7 @@
 <p>Frontend được lưu trữ trên Amazon S3 và phân phối qua CloudFront CDN để tối ưu độ trễ. Hệ thống bảo mật bằng AWS WAF, Amazon Cognito và Security Groups nhằm kiểm soát truy cập và bảo vệ ứng dụng.</p>
 <p>Dữ liệu được lưu trữ trên Amazon RDS (PostgreSQL), trong khi Amazon ElastiCache (Redis) được sử dụng để cache và xử lý các tác vụ độ trễ thấp như session và voting, giúp giảm tải cho backend. Hệ thống được giám sát bằng Amazon CloudWatch và triển khai tự động thông qua CI/CD với GitHub Actions, kết hợp Amazon ECR và AWS IAM.</p>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/2-Proposal/lunchsync.png" alt="LunchSync Platform Architecture"></p>
-<p><em>Dịch vụ AWS sử dụng</em></p>
+<h4 id="dịch-vụ-aws-sử-dụng">Dịch vụ AWS sử dụng</h4>
 <ul>
 <li><strong>Amazon ALB (Application Load Balancer)</strong>: Phân phối lưu lượng HTTP/HTTPS đến các service backend.</li>
 <li><strong>Amazon ECS Fargate</strong>: Chạy container backend theo mô hình serverless.</li>
@@ -1033,6 +1042,7 @@
 <li><strong>Amazon ECR</strong>: Lưu trữ Docker images phục vụ deployment.</li>
 <li><strong>AWS IAM</strong>: Quản lý quyền truy cập giữa các service và pipeline CI/CD.</li>
 <li><strong>AWS Secrets Manager</strong>: Quản lý các tài khoản, mật khẩu kết nối đến Cognito, RDS, Redis</li>
+<li><strong>VPC Endpoint</strong>: Kết nối an toàn các tài nguyên trong ptrivate subnet vs dịch vụ ngoài vpc</li>
 </ul>
 <h3 id="4-scope-mvp">4. Scope MVP</h3>
 <table>
@@ -1196,22 +1206,80 @@ PHASE 0: SETUP (1 người host)</p>
 <li><em>Sau triển khai</em>: Nghiên cứu thêm trong vòng 1 năm.</li>
 </ul>
 <h3 id="8-ước-tính-ngân-sách">8. Ước tính ngân sách</h3>
-<ul>
-<li><strong>Amazon Route 53</strong>: 0,50 USD/tháng (1 Hosted Zone, &lt;10.000 query)</li>
-<li><strong>AWS WAF</strong>: 7,60 USD/tháng (1 WebACL, 2 rules cơ bản, &lt;1 triệu request)</li>
-<li><strong>Amazon ECS (Fargate)</strong>: 18,00 USD/tháng (2 tasks chạy 24/7 trên 2 AZs)</li>
-<li><strong>Amazon S3</strong>: 0,05 USD/tháng (1 GB storage, &lt;10.000 request)</li>
-<li><strong>Amazon CloudFront</strong>: 0,00 USD/tháng (&lt;1 TB data transfer – Always Free)</li>
-<li><strong>Amazon Cognito</strong>: 0,00 USD/tháng (~100 MAU – Always Free)</li>
-<li><strong>Application Load Balancer (ALB)</strong>: 0,00 USD/tháng (Free Tier) (~16,00 USD/tháng sau Free Tier)</li>
-<li><strong>Amazon RDS (PostgreSQL Multi-AZ)</strong>: ~18,00 USD/tháng (node phụ + storage nhân đôi)</li>
-<li><strong>Amazon ElastiCache (Redis Multi-AZ)</strong>: ~11,50 USD/tháng (2 nodes, trả phí node phụ)</li>
-<li><strong>Amazon ECR</strong>: 0,00 USD/tháng (&lt;500 MB storage)</li>
-<li><strong>Cross-AZ Data Transfer</strong>: ~0,10 USD/tháng</li>
-</ul>
+<h3 id="bảng-chi-phí-hệ-thống-full-2-az-30-ngày">Bảng Chi Phí Hệ Thống Full 2 AZ (30 ngày)</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Nhóm Dịch Vụ</th>
+          <th>Thành phần (Multi-AZ)</th>
+          <th>Cách tính chi tiết</th>
+          <th>Chi phí (USD/Tháng)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>VPC Endpoint</td>
+          <td>5 Interface Endpoints</td>
+          <td>5 loại × 2 AZs × 730h × $0.013</td>
+          <td>$94.90</td>
+      </tr>
+      <tr>
+          <td>Load Balancer</td>
+          <td>ALB + 2 Public IPs</td>
+          <td>($0.0225 + $0.01 cho 2 IP) × 730h</td>
+          <td>$23.72</td>
+      </tr>
+      <tr>
+          <td>Compute</td>
+          <td>ECS Fargate</td>
+          <td>2 Tasks (0.25 vCPU - 0.5GB)</td>
+          <td>$19.00</td>
+      </tr>
+      <tr>
+          <td>Database</td>
+          <td>RDS PostgreSQL</td>
+          <td>t3.micro (Multi-AZ: 2 nodes + 20GB Storage)</td>
+          <td>$30.00 - $34.00</td>
+      </tr>
+      <tr>
+          <td>Cache</td>
+          <td>ElastiCache Redis</td>
+          <td>t3.micro (Multi-AZ: 2 nodes)</td>
+          <td>$24.00 - $26.00</td>
+      </tr>
+      <tr>
+          <td>Monitoring</td>
+          <td>CloudWatch + WAF + Secrets</td>
+          <td>Lưu lượng thấp/cơ bản</td>
+          <td>$10.50</td>
+      </tr>
+      <tr>
+          <td>Khác</td>
+          <td>Route53, S3, ECR, Cognito</td>
+          <td>Phí duy trì</td>
+          <td>$2.00</td>
+      </tr>
+      <tr>
+          <td><strong>TỔNG CỘNG</strong></td>
+          <td></td>
+          <td></td>
+          <td><strong>~$204.12 - $210.12</strong></td>
+      </tr>
+  </tbody>
+</table>
 <hr>
-<h4 id="tổng-chi-phí-ước-tính"><strong>Tổng chi phí ước tính</strong></h4>
-<p><strong>~55,75 - 71,75 USD/tháng (~1.400.000 ~ 1.890.000 VNĐ)</strong></p>
+<h3 id="đánh-giá">Đánh giá</h3>
+<ul>
+<li>
+<p><strong>Mức độ chịu lỗi:</strong> Cực cao. Hệ thống có thể chịu được việc một Availability Zone (AZ) của AWS bị gián đoạn hoàn toàn mà ứng dụng vẫn hoạt động bình thường.</p>
+</li>
+<li>
+<p><strong>Bảo mật:</strong> Tối ưu cao trên Cloud hiện nay (sử dụng private subnet hoàn toàn, không có Public IP, toàn bộ traffic đi qua PrivateLink).</p>
+</li>
+<li>
+<p><strong>Chi phí:</strong> Khoảng <strong>5,2 triệu VNĐ/tháng</strong>.</p>
+</li>
+</ul>
 <h3 id="9-đánh-giá-rủi-ro">9. Đánh giá rủi ro</h3>
 <table>
   <thead>
@@ -1866,19 +1934,19 @@ PHASE 0: SETUP (1 người host)</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1775310449"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1776382823"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1775310449"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1775310449"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1776382823"></script>
 
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1775310449" rel="stylesheet" />
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1775310449"></script>
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1776382823" rel="stylesheet" />
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1776382823"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -128,54 +128,44 @@ Mục này trình bày các bước cấu hình **S3**, **Origin Access Control*
 
 ![CloudFront bước 21](/images/4-Workshop/4.4-S3-CloudFront/cf.21.jpg)
 
-30. Với behavior `media/*`, giữ cache policy phù hợp cho nội dung tĩnh từ S3 và không cần function bổ sung.
+30. Với behavior `media/*`:
 
 ![CloudFront bước 22](/images/4-Workshop/4.4-S3-CloudFront/cf.22.jpg)
-
-31. Tạo **CloudFront Function** `api-for-alb` để chuẩn hóa URI khi gọi API qua ALB.
-
 ![CloudFront bước 23](/images/4-Workshop/4.4-S3-CloudFront/cf.23.jpg)
 
-32. Tạo hoặc chỉnh một behavior động như `sessions/*` để trỏ sang origin ALB, chỉ nhận HTTPS và forward đầy đủ request xuống backend.
+31. Tạo behavior mới cho đường dẫn `api/*`, trỏ về origin ALB và HTTPS only, CachingDisable và origin request policy AllViewer.
+    
+32. Kiểm tra danh sách behavior cuối cùng 
+![CloudFront bước 23](/images/4-Workshop/4.4-S3-CloudFront/cf.24.jpg)
 
-![CloudFront bước 24](/images/4-Workshop/4.4-S3-CloudFront/cf.24.jpg)
 
-33. Với các behavior động đi vào ALB, dùng `CachingDisabled`, `AllViewer` và gắn function `api-for-alb` ở sự kiện **Viewer request**.
-
-![CloudFront bước 25](/images/4-Workshop/4.4-S3-CloudFront/cf.25.jpg)
-
-34. Kiểm tra danh sách behavior cuối cùng để chắc rằng các path như `/sessions/*`, `/auth/*`, `/restaurants/*`, `/collections/*`, `/dishes/*` đi về ALB, còn `Default` và `media/*` đi về S3.
-
+33.  Quay về **Route 53**, mở hosted zone `lunchsync.space` và chuẩn bị tạo record alias cho CloudFront.
 ![CloudFront bước 26](/images/4-Workshop/4.4-S3-CloudFront/cf.26.jpg)
 
-35. Quay về **Route 53**, mở hosted zone `lunchsync.space` và chuẩn bị tạo record alias cho CloudFront.
-
+34. Tạo record alias ở root domain `lunchsync.space` trỏ đến distribution CloudFront.
 ![CloudFront bước 27](/images/4-Workshop/4.4-S3-CloudFront/cf.27.jpg)
 
-36. Tạo record alias ở root domain `lunchsync.space` trỏ đến distribution CloudFront.
-
+35. Kiểm tra lại hosted zone để xác nhận record alias đến CloudFront đã xuất hiện.
 ![CloudFront bước 28](/images/4-Workshop/4.4-S3-CloudFront/cf.28.jpg)
 
-37. Kiểm tra lại hosted zone để xác nhận record alias đến CloudFront đã xuất hiện.
+
+36. Quay lại **CloudFront > Edit settings**, thêm **Alternate domain name (CNAME)** là `lunchsync.space` và chọn certificate ACM ở `us-east-1`.
 
 ![CloudFront bước 29](/images/4-Workshop/4.4-S3-CloudFront/cf.29.jpg)
-
-38. Quay lại **CloudFront > Edit settings**, thêm **Alternate domain name (CNAME)** là `lunchsync.space` và chọn certificate ACM ở `us-east-1`.
-
 ![CloudFront bước 30](/images/4-Workshop/4.4-S3-CloudFront/cf.30.jpg)
 
-39. Trong cùng màn hình settings, đặt **Default root object = index.html** và bật các phiên bản HTTP cần thiết như `HTTP/2` và `HTTP/3`.
+1.  Trong cùng màn hình settings, đặt **Default root object = index.html** và bật các phiên bản HTTP cần thiết như `HTTP/2` và `HTTP/3`.
 
 ![CloudFront bước 31](/images/4-Workshop/4.4-S3-CloudFront/cf.31.jpg)
 
-40. Lưu settings rồi kiểm tra trang tổng quan distribution để xác nhận alias `lunchsync.space`, certificate và `index.html` đã được áp dụng.
+38. Lưu settings rồi kiểm tra trang tổng quan distribution để xác nhận alias `lunchsync.space`, certificate và `index.html` đã được áp dụng.
 
 ![CloudFront bước 32](/images/4-Workshop/4.4-S3-CloudFront/cf.32.jpg)
 
-41. Mở `https://lunchsync.space` để kiểm tra frontend đã phục vụ qua CloudFront với domain riêng.
+39. Mở `https://lunchsync.space` để kiểm tra frontend đã phục vụ qua CloudFront với domain riêng.
 
 ![CloudFront bước 33](/images/4-Workshop/4.4-S3-CloudFront/cf.33.jpg)
 
-42. Kiểm tra thêm một asset như `https://lunchsync.space/media/lunchsync.png` để xác nhận behavior `media/*` cũng đang hoạt động đúng.
+40. Kiểm tra thêm một asset như `https://lunchsync.space/media/lunchsync.png` để xác nhận behavior `media/*` cũng đang hoạt động đúng.
 
 ![CloudFront bước 34](/images/4-Workshop/4.4-S3-CloudFront/cf.34.jpg)

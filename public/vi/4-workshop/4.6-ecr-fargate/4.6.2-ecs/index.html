@@ -15,21 +15,21 @@
     <title>Triển khai IAM, ECS và task definition :: Báo cáo thực tập</title>
 
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1775311399" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1776382823" rel="stylesheet">
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1775311399" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1776382823" rel="stylesheet">
     
     
 
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1775311399"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1776382823"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1775311399"></script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1775311399"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1776382823"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1776382823"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/Workshop-FCAJ-2026-Report\/\/vi";
     
 </script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1775311399"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1776382823"></script>
  
   </div>
 
@@ -884,110 +884,99 @@
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.2.jpg" alt="IAM bước 2"></p>
 <ol start="3">
-<li>Đặt tên role là <code>lunchsync-ecs-task-role</code> để dùng làm <strong>task role</strong> cho container backend.</li>
+<li>Đặt tên role là <code>lunchsync-ecs-task-role</code> để dùng làm <strong>task role</strong> cho container backend và không add permissions.</li>
 </ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.3.jpg" alt="IAM bước 3"></p>
+<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.3.jpg" alt="IAM bước 3">
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.4.jpg" alt="IAM bước 4"></p>
 <ol start="4">
-<li>Sau khi role được tạo, mở lại <code>lunchsync-ecs-task-role</code> để thêm quyền đọc secrets.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.4.jpg" alt="IAM bước 4"></p>
-<ol start="5">
-<li>Tạo inline policy cho task role, cho phép <code>secretsmanager:GetSecretValue</code> và <code>DescribeSecret</code> trên các secret của <code>db</code>, <code>redis</code> và <code>cognito</code>.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.5.jpg" alt="IAM bước 5"></p>
-<ol start="6">
-<li>Kiểm tra lại <code>lunchsync-ecs-task-role</code> để xác nhận inline policy đọc secrets đã được attach.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.6.jpg" alt="IAM bước 6"></p>
-<ol start="7">
 <li>Tạo role thứ hai cho <strong>execution role</strong>, ở bước Add permissions chọn policy managed <code>AmazonECSTaskExecutionRolePolicy</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.7.jpg" alt="IAM bước 7"></p>
-<ol start="8">
+<ol start="5">
 <li>Thêm inline policy cho execution role để ECS agent cũng có thể đọc các secret cần inject vào container khi task khởi động.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.8.jpg" alt="IAM bước 8"></p>
-<ol start="9">
+<ol start="6">
 <li>Kiểm tra lại role <code>lunchsync-ecs-execution-role</code> để chắc rằng nó có cả <code>AmazonECSTaskExecutionRolePolicy</code> và policy đọc secret.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.9.jpg" alt="IAM bước 9"></p>
-<ol start="10">
+<ol start="7">
 <li>Mở <strong>Amazon ECS</strong> và vào mục <strong>Clusters</strong>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.1.jpg" alt="ECS bước 1"></p>
-<ol start="11">
+<ol start="8">
 <li>Tạo cluster mới tên <code>lunchsync-cluster</code>, chọn hạ tầng <strong>Fargate only</strong>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.2.jpg" alt="ECS bước 2"></p>
-<ol start="12">
+<ol start="9">
 <li>Nếu cần, cấu hình thêm phần observability, <strong>Container Insights</strong> và <strong>ECS Exec</strong> theo mức theo dõi mong muốn.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.3.jpg" alt="ECS bước 3"></p>
-<ol start="13">
+<ol start="10">
 <li>Hoàn tất tạo cluster.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.4.jpg" alt="ECS bước 4"></p>
-<ol start="14">
+<ol start="11">
 <li>Mở cluster <code>lunchsync-cluster</code> và xác nhận cluster đang ở trạng thái <strong>Active</strong> với capacity provider Fargate.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.5.jpg" alt="ECS bước 5"></p>
-<ol start="15">
+<ol start="12">
 <li>Từ ECS, chuyển sang <strong>Task definitions</strong> và bắt đầu tạo task definition mới cho backend.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.6.jpg" alt="ECS bước 6"></p>
-<ol start="16">
+<ol start="13">
 <li>Đặt family là <code>lunchsync-backend</code>, chọn <strong>AWS Fargate</strong>, <code>Linux/X86_64</code>, <code>awsvpc</code>, gán <code>lunchsync-ecs-task-role</code> và <code>lunchsync-ecs-execution-role</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/td.1.jpg" alt="Task Definition bước 1"></p>
-<ol start="17">
+<ol start="14">
 <li>Thêm container <code>lunchsync-backend</code>, dùng image URI từ ECR và mở port <code>8080</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/td.2.jpg" alt="Task Definition bước 2"></p>
-<ol start="18">
+<ol start="15">
 <li>Khai báo environment variables và secret mapping cho Cognito, chuỗi kết nối database, Redis, <code>NODE_ENV</code> và các biến runtime cần thiết khác.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/td.3.jpg" alt="Task Definition bước 3"></p>
-<ol start="19">
+<ol start="16">
 <li>Cấu hình health check cho container, ví dụ <code>curl -f http://localhost:8080/health || exit 1</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/td.4.jpg" alt="Task Definition bước 4"></p>
-<ol start="20">
+<ol start="17">
 <li>Tạo revision task definition và xác nhận <code>lunchsync-backend</code> đã ở trạng thái <strong>ACTIVE</strong>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/td.5.jpg" alt="Task Definition bước 5"></p>
-<ol start="21">
+<ol start="18">
 <li>Quay lại cluster <code>lunchsync-cluster</code> và bắt đầu tạo <strong>service</strong> mới dùng task definition vừa tạo.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.7.jpg" alt="ECS bước 7"></p>
-<ol start="22">
+<ol start="19">
 <li>Đặt service name là <code>lunchsync-backend-service</code>, chọn launch type <strong>FARGATE</strong> và task definition family <code>lunchsync-backend</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.8.jpg" alt="ECS bước 8"></p>
-<ol start="23">
+<ol start="20">
 <li>Cấu hình networking cho service: chọn private subnets trong <code>lunchsync-vpc</code>, gắn <code>backend-sg</code> và để <code>Public IP = Off</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.9.jpg" alt="ECS bước 9"></p>
-<ol start="24">
+<ol start="21">
 <li>Bật load balancing bằng <strong>Application Load Balancer</strong>, dùng ALB hiện có, listener <code>HTTPS:443</code> và container <code>lunchsync-backend:8080</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.10.jpg" alt="ECS bước 10"></p>
-<ol start="25">
+<ol start="22">
 <li>Gắn service với target group <code>lunchsync-tg-backend</code>, giữ health check path <code>/health</code>, rồi tạo service.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.11.jpg" alt="ECS bước 11"></p>
-<ol start="26">
+<ol start="23">
 <li>Sau khi tạo xong, theo dõi rollout ban đầu: service có <code>2 Desired tasks</code>, deployment còn <strong>In progress</strong> và target health cần vài phút để ổn định.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.12.jpg" alt="ECS bước 12"></p>
-<ol start="27">
+<ol start="24">
 <li>Nếu muốn tự động scale, cấu hình <strong>Service Auto Scaling</strong> theo CPU utilization.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.13.jpg" alt="ECS bước 13"></p>
-<ol start="28">
+<ol start="25">
 <li>Có thể thêm policy auto scaling thứ hai theo memory utilization.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.14.jpg" alt="ECS bước 14"></p>
-<ol start="29">
+<ol start="26">
 <li>Ở màn hình cuối, kiểm tra tab <strong>Tasks</strong> để xác nhận task đã chạy; nếu service vẫn báo trạng thái như <code>Rollback failed</code> hoặc target health chưa xanh thì cần mở <strong>Events/Logs</strong> để rà lại cấu hình container, secret hoặc health check.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/ecs.15.jpg" alt="ECS bước 15"></p>
@@ -1601,19 +1590,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1775311399"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1776382823"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1775311399"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1776382823"></script>
 
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1775311399" rel="stylesheet" />
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1775311399"></script>
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1776382823" rel="stylesheet" />
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1776382823"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -15,21 +15,21 @@
     <title>S3 và CloudFront :: Báo cáo thực tập</title>
 
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1775311399" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1775311399" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1776382823" rel="stylesheet">
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1775311399" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1776382823" rel="stylesheet">
     
     
 
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1775311399"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1776382823"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1775311399"></script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1775311399"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1776382823"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1776382823"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/Workshop-FCAJ-2026-Report\/\/vi";
     
 </script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1775311399"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1776382823"></script>
  
   </div>
 
@@ -986,54 +986,49 @@
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.21.jpg" alt="CloudFront bước 21"></p>
 <ol start="30">
-<li>Với behavior <code>media/*</code>, giữ cache policy phù hợp cho nội dung tĩnh từ S3 và không cần function bổ sung.</li>
+<li>Với behavior <code>media/*</code>:</li>
 </ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.22.jpg" alt="CloudFront bước 22"></p>
+<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.22.jpg" alt="CloudFront bước 22">
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.23.jpg" alt="CloudFront bước 23"></p>
 <ol start="31">
-<li>Tạo <strong>CloudFront Function</strong> <code>api-for-alb</code> để chuẩn hóa URI khi gọi API qua ALB.</li>
+<li>
+<p>Tạo behavior mới cho đường dẫn <code>api/*</code>, trỏ về origin ALB và HTTPS only, CachingDisable và origin request policy AllViewer.</p>
+</li>
+<li>
+<p>Kiểm tra danh sách behavior cuối cùng
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.24.jpg" alt="CloudFront bước 23"></p>
+</li>
+<li>
+<p>Quay về <strong>Route 53</strong>, mở hosted zone <code>lunchsync.space</code> và chuẩn bị tạo record alias cho CloudFront.
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.26.jpg" alt="CloudFront bước 26"></p>
+</li>
+<li>
+<p>Tạo record alias ở root domain <code>lunchsync.space</code> trỏ đến distribution CloudFront.
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.27.jpg" alt="CloudFront bước 27"></p>
+</li>
+<li>
+<p>Kiểm tra lại hosted zone để xác nhận record alias đến CloudFront đã xuất hiện.
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.28.jpg" alt="CloudFront bước 28"></p>
+</li>
+<li>
+<p>Quay lại <strong>CloudFront &gt; Edit settings</strong>, thêm <strong>Alternate domain name (CNAME)</strong> là <code>lunchsync.space</code> và chọn certificate ACM ở <code>us-east-1</code>.</p>
+</li>
 </ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.23.jpg" alt="CloudFront bước 23"></p>
-<ol start="32">
-<li>Tạo hoặc chỉnh một behavior động như <code>sessions/*</code> để trỏ sang origin ALB, chỉ nhận HTTPS và forward đầy đủ request xuống backend.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.24.jpg" alt="CloudFront bước 24"></p>
-<ol start="33">
-<li>Với các behavior động đi vào ALB, dùng <code>CachingDisabled</code>, <code>AllViewer</code> và gắn function <code>api-for-alb</code> ở sự kiện <strong>Viewer request</strong>.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.25.jpg" alt="CloudFront bước 25"></p>
-<ol start="34">
-<li>Kiểm tra danh sách behavior cuối cùng để chắc rằng các path như <code>/sessions/*</code>, <code>/auth/*</code>, <code>/restaurants/*</code>, <code>/collections/*</code>, <code>/dishes/*</code> đi về ALB, còn <code>Default</code> và <code>media/*</code> đi về S3.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.26.jpg" alt="CloudFront bước 26"></p>
-<ol start="35">
-<li>Quay về <strong>Route 53</strong>, mở hosted zone <code>lunchsync.space</code> và chuẩn bị tạo record alias cho CloudFront.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.27.jpg" alt="CloudFront bước 27"></p>
-<ol start="36">
-<li>Tạo record alias ở root domain <code>lunchsync.space</code> trỏ đến distribution CloudFront.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.28.jpg" alt="CloudFront bước 28"></p>
-<ol start="37">
-<li>Kiểm tra lại hosted zone để xác nhận record alias đến CloudFront đã xuất hiện.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.29.jpg" alt="CloudFront bước 29"></p>
-<ol start="38">
-<li>Quay lại <strong>CloudFront &gt; Edit settings</strong>, thêm <strong>Alternate domain name (CNAME)</strong> là <code>lunchsync.space</code> và chọn certificate ACM ở <code>us-east-1</code>.</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.30.jpg" alt="CloudFront bước 30"></p>
-<ol start="39">
+<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.29.jpg" alt="CloudFront bước 29">
+<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.30.jpg" alt="CloudFront bước 30"></p>
+<ol>
 <li>Trong cùng màn hình settings, đặt <strong>Default root object = index.html</strong> và bật các phiên bản HTTP cần thiết như <code>HTTP/2</code> và <code>HTTP/3</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.31.jpg" alt="CloudFront bước 31"></p>
-<ol start="40">
+<ol start="38">
 <li>Lưu settings rồi kiểm tra trang tổng quan distribution để xác nhận alias <code>lunchsync.space</code>, certificate và <code>index.html</code> đã được áp dụng.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.32.jpg" alt="CloudFront bước 32"></p>
-<ol start="41">
+<ol start="39">
 <li>Mở <code>https://lunchsync.space</code> để kiểm tra frontend đã phục vụ qua CloudFront với domain riêng.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.33.jpg" alt="CloudFront bước 33"></p>
-<ol start="42">
+<ol start="40">
 <li>Kiểm tra thêm một asset như <code>https://lunchsync.space/media/lunchsync.png</code> để xác nhận behavior <code>media/*</code> cũng đang hoạt động đúng.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.34.jpg" alt="CloudFront bước 34"></p>
@@ -1643,19 +1638,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1775311399"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1776382823"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1775311399"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1775311399"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1776382823"></script>
 
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1775311399" rel="stylesheet" />
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1775311399"></script>
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1776382823" rel="stylesheet" />
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1776382823"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
