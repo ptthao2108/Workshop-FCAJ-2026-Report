@@ -25,7 +25,6 @@ Mục này trình bày các bước cấu hình **IAM**, **ECS** và **Task Defi
 ![IAM bước 3](/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.3.jpg)
 ![IAM bước 4](/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.4.jpg)
 
-
 4. Tạo role thứ hai cho **execution role**, ở bước Add permissions chọn policy managed `AmazonECSTaskExecutionRolePolicy`.
 
 ![IAM bước 7](/images/4-Workshop/4.6-ECR-Fargate/4.6.2-ecs/iam.7.jpg)

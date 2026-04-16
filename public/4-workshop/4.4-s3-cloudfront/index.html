@@ -15,21 +15,21 @@
     <title>S3 and CloudFront :: Internship Report</title>
 
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1776382823" rel="stylesheet">
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/nucleus.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/fontawesome-all.min.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hybrid.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/featherlight.min.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/perfect-scrollbar.min.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/auto-complete.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/atom-one-dark-reasonable.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme.css?1776383408" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/hugo-theme.css?1776383408" rel="stylesheet">
     
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1776382823" rel="stylesheet">
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/css/theme-workshop.css?1776383408" rel="stylesheet">
     
     
 
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery-3.3.1.min.js?1776383408"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,14 +59,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1776382823"></script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1776382823"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/lunr.min.js?1776383408"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/auto-complete.js?1776383408"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/localhost:1313\/Workshop-FCAJ-2026-Report\/";
     
 </script>
-<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1776382823"></script>
+<script type="text/javascript" src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/search.js?1776383408"></script>
  
   </div>
 
@@ -867,14 +867,14 @@
 
 
 	<h4 id="overview">Overview</h4>
-<p>This section describes the steps to configure <strong>S3</strong>, <strong>Origin Access Control</strong>, and <strong>CloudFront</strong> for the system’s static frontend.</p>
+<p>This section describes the configuration steps for <strong>Amazon S3</strong>, <strong>Origin Access Control (OAC)</strong>, and <strong>CloudFront</strong> to serve the static frontend of the system.</p>
 <h4 id="deployment-steps">Deployment Steps</h4>
 <ol>
-<li>Open <strong>Amazon S3</strong> and start creating a new bucket for the LunchSync frontend.</li>
+<li>Open <strong>Amazon S3</strong> and create a new bucket for the LunchSync frontend.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/s3.1.jpg" alt="S3 step 1"></p>
 <ol start="2">
-<li>Set the bucket prefix to <code>lunchsync-project</code>, choose region <code>ap-southeast-1</code>, let S3 generate the full name based on account/region, and keep the bucket private.</li>
+<li>Set the bucket prefix to <code>lunchsync-project</code>, choose region <code>ap-southeast-1</code>, allow S3 to generate the full name, and keep the bucket private.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/s3.2.jpg" alt="S3 step 2"></p>
 <ol start="3">
@@ -882,67 +882,67 @@
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/s3.3.jpg" alt="S3 step 3"></p>
 <ol start="4">
-<li>Keep the default encryption <code>SSE-S3</code>, create the bucket, then upload frontend content into folders such as <code>frontend/</code> and <code>media/</code>.</li>
+<li>Use default encryption <code>SSE-S3</code>, create the bucket, then upload frontend content into folders such as <code>frontend/</code> and <code>media/</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/s3.4.jpg" alt="S3 step 4"></p>
 <ol start="5">
-<li>After attaching the bucket to CloudFront, check the <strong>bucket policy</strong> to ensure only the <code>cloudfront.amazonaws.com</code> service from the distribution can read objects.</li>
+<li>After attaching the bucket to CloudFront, check the <strong>bucket policy</strong> to ensure only <code>cloudfront.amazonaws.com</code> from your distribution can read objects.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/s3.5.jpg" alt="S3 step 5"></p>
 <ol start="6">
-<li>Go to <strong>CloudFront &gt; Origin access</strong> and start creating a new <strong>Origin Access Control (OAC)</strong> for the S3 bucket.</li>
+<li>Go to <strong>CloudFront &gt; Origin access</strong> and create a new <strong>Origin Access Control (OAC)</strong> for the S3 bucket.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/oac.1.jpg" alt="OAC step 1"></p>
 <ol start="7">
-<li>Name the OAC <code>lunchsync-oac</code>, provide a clear description for the LunchSync bucket, and keep <strong>Sign requests</strong> enabled.</li>
+<li>Name the OAC <code>lunchsync-oac</code>, add a clear description, and keep <strong>Sign requests</strong> enabled.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/oac.2.jpg" alt="OAC step 2"></p>
 <ol start="8">
-<li>Verify the OAC list to confirm <code>lunchsync-oac</code> has been created before proceeding to distribution setup.</li>
+<li>Verify that <code>lunchsync-oac</code> has been created successfully before proceeding.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/oac.3.jpg" alt="OAC step 3"></p>
 <ol start="9">
-<li>Open <strong>CloudFront &gt; Distributions</strong> and start creating a new distribution.</li>
+<li>Go to <strong>CloudFront &gt; Distributions</strong> and start creating a new distribution.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.1.jpg" alt="CloudFront step 1"></p>
 <ol start="10">
-<li>Choose the distribution setup plan and continue with the wizard.</li>
+<li>Choose the distribution setup plan and continue the wizard.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.2.jpg" alt="CloudFront step 2"></p>
 <ol start="11">
-<li>Name the distribution <code>S3-Frontend</code>, select <strong>Single website or app</strong>, and skip attaching a Route 53 domain in the initial wizard.</li>
+<li>Name the distribution <code>S3-Frontend</code>, select <strong>Single website or app</strong>, and skip Route 53 domain setup in the initial wizard.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.3.jpg" alt="CloudFront step 3"></p>
 <ol start="12">
-<li>In <strong>Specify origin</strong>, select <strong>Amazon S3</strong> as the origin type.</li>
+<li>In <strong>Specify origin</strong>, choose <strong>Amazon S3</strong> as the origin type.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.4.jpg" alt="CloudFront step 4"></p>
 <ol start="13">
-<li>Select the project’s S3 bucket as the origin, set <strong>Origin path</strong> to <code>/frontend</code>, and enable access to the private bucket.</li>
+<li>Select the project S3 bucket as origin, set <strong>Origin path = /frontend</strong>, and allow CloudFront to access the private bucket.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.5.jpg" alt="CloudFront step 5"></p>
 <ol start="14">
-<li>Keep AWS-recommended origin/cache settings for static content from S3.</li>
+<li>Keep AWS recommended origin and cache settings for static S3 content.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.6.jpg" alt="CloudFront step 6"></p>
 <ol start="15">
-<li>In <strong>Enable security</strong>, keep the default CloudFront/WAF protections in the wizard.</li>
+<li>In <strong>Enable security</strong>, keep default CloudFront/WAF protections.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.7.jpg" alt="CloudFront step 7"></p>
 <ol start="16">
-<li>Review the configuration: S3 origin pointing to the LunchSync bucket, <code>Origin path = /frontend</code>, then create the distribution.</li>
+<li>Review configuration: S3 origin, <code>Origin path = /frontend</code>, then create the distribution.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.8.jpg" alt="CloudFront step 8"></p>
 <ol start="17">
-<li>After creation, open the <strong>Origins</strong> tab to confirm the S3 origin is configured correctly with the right origin path and OAC.</li>
+<li>After creation, open <strong>Origins</strong> tab to verify correct origin path and OAC.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.9.jpg" alt="CloudFront step 9"></p>
 <ol start="18">
-<li>If needed, go to <strong>Edit origin</strong> to reattach <code>lunchsync-oac</code> and copy the sample policy into the S3 bucket policy.</li>
+<li>If needed, edit origin to attach <code>lunchsync-oac</code> and copy the generated policy into the S3 bucket policy.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.10.jpg" alt="CloudFront step 10"></p>
 <ol start="19">
-<li>Open the <strong>Behaviors</strong> tab and edit the default behavior for the frontend.</li>
+<li>Open <strong>Behaviors</strong> tab to configure default behavior.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.11.jpg" alt="CloudFront step 11"></p>
 <ol start="20">
@@ -950,86 +950,81 @@
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.12.jpg" alt="CloudFront step 12"></p>
 <ol start="21">
-<li>Use appropriate cache policy like <code>CachingOptimized</code> and origin request policy such as <code>CORS-S3Origin</code>.</li>
+<li>Keep cache policy <code>CachingOptimized</code> and origin request policy <code>CORS-S3Origin</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.13.jpg" alt="CloudFront step 13"></p>
 <ol start="22">
-<li>Open the <strong>Error pages</strong> tab and start creating custom error responses for the SPA.</li>
+<li>Open <strong>Error pages</strong> and configure custom error response for SPA.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.14.jpg" alt="CloudFront step 14"></p>
 <ol start="23">
-<li>Create a rule so when the origin returns <code>403</code>, CloudFront responds with <code>/index.html</code> and status <code>200</code> for frontend routes.</li>
+<li>Create a rule: when origin returns <code>403</code>, respond with <code>/index.html</code> and status <code>200</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.15.jpg" alt="CloudFront step 15"></p>
 <ol start="24">
-<li>Verify the error pages list to confirm the SPA fallback rule is saved.</li>
+<li>Verify SPA fallback rule is saved.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.16.jpg" alt="CloudFront step 16"></p>
 <ol start="25">
-<li>Go back to <strong>Origins</strong> and add a second origin: the backend <strong>ALB</strong>.</li>
+<li>Go back to <strong>Origins</strong> and create a second origin for the backend <strong>ALB</strong>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.17.jpg" alt="CloudFront step 17"></p>
 <ol start="26">
-<li>For the ALB origin, input the ALB DNS name and use <strong>HTTPS only</strong> for communication.</li>
+<li>Enter ALB DNS name, use <strong>HTTPS only</strong> for origin communication.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.18.jpg" alt="CloudFront step 18"></p>
 <ol start="27">
-<li>Add a third origin for media from S3, reuse the same bucket but set <strong>Origin path = /media</strong> and attach <code>lunchsync-oac</code>.</li>
+<li>Create a third origin for media using the same S3 bucket with <strong>Origin path = /media</strong> and attach OAC.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.19.jpg" alt="CloudFront step 19"></p>
 <ol start="28">
-<li>Verify the <strong>Origins</strong> tab now includes 3 origins: <code>frontend</code>, <code>ALB backend</code>, and <code>media</code>.</li>
+<li>Verify there are now 3 origins: <code>frontend</code>, <code>ALB backend</code>, and <code>media</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.20.jpg" alt="CloudFront step 20"></p>
 <ol start="29">
-<li>Create a new behavior for <code>media/*</code>, route to the media origin, and enforce HTTPS.</li>
+<li>Create behavior for <code>media/*</code>, route to media origin, enforce HTTPS.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.21.jpg" alt="CloudFront step 21"></p>
 <ol start="30">
-<li>For the <code>media/*</code> behavior:</li>
-</ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.22.jpg" alt="CloudFront step 22">
-<img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.23.jpg" alt="CloudFront step 23"></p>
-<ol start="31">
 <li>
-<p>Create another behavior for <code>api/*</code>, route to the ALB origin, enforce HTTPS only, disable caching, and use <code>AllViewer</code> origin request policy.</p>
+<p>Create behavior for <code>api/*</code>, route to ALB, set HTTPS only, disable caching, use <code>AllViewer</code> policy.</p>
 </li>
 <li>
-<p>Review the final behaviors list.</p>
+<p>Verify final behavior list.</p>
 </li>
 </ol>
-<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.24.jpg" alt="CloudFront step 24"></p>
-<ol start="33">
-<li>Go to <strong>Route 53</strong>, open hosted zone <code>lunchsync.space</code>, and prepare to create an alias record for CloudFront.</li>
+<p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.24.jpg" alt="CloudFront step 23"></p>
+<ol start="32">
+<li>Go to <strong>Route 53</strong>, open hosted zone <code>lunchsync.space</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.26.jpg" alt="CloudFront step 26"></p>
-<ol start="34">
-<li>Create an alias record at the root domain <code>lunchsync.space</code> pointing to the CloudFront distribution.</li>
+<ol start="33">
+<li>Create an alias record at root domain pointing to CloudFront distribution.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.27.jpg" alt="CloudFront step 27"></p>
-<ol start="35">
-<li>Verify the hosted zone to confirm the alias record to CloudFront exists.</li>
+<ol start="34">
+<li>Verify the alias record appears.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.28.jpg" alt="CloudFront step 28"></p>
-<ol start="36">
-<li>Go back to <strong>CloudFront &gt; Edit settings</strong>, add <strong>Alternate domain name (CNAME)</strong> as <code>lunchsync.space</code>, and select the ACM certificate in <code>us-east-1</code>.</li>
+<ol start="35">
+<li>Return to <strong>CloudFront settings</strong>, add <strong>Alternate domain (CNAME)</strong> <code>lunchsync.space</code> and select ACM certificate in <code>us-east-1</code>.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.29.jpg" alt="CloudFront step 29">
 <img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.30.jpg" alt="CloudFront step 30"></p>
-<ol start="37">
-<li>In the same settings, set <strong>Default root object = index.html</strong> and enable HTTP versions like <code>HTTP/2</code> and <code>HTTP/3</code>.</li>
+<ol start="36">
+<li>Set <strong>Default root object = index.html</strong> and enable HTTP versions (<code>HTTP/2</code>, <code>HTTP/3</code>).</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.31.jpg" alt="CloudFront step 31"></p>
-<ol start="38">
-<li>Save settings and verify the distribution overview to confirm alias <code>lunchsync.space</code>, certificate, and <code>index.html</code> are applied.</li>
+<ol start="37">
+<li>Save settings and verify domain, certificate, and root object.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.32.jpg" alt="CloudFront step 32"></p>
-<ol start="39">
-<li>Open <code>https://lunchsync.space</code> to verify the frontend is served via CloudFront with the custom domain.</li>
+<ol start="38">
+<li>Open <code>https://lunchsync.space</code> to verify frontend is served via CloudFront.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.33.jpg" alt="CloudFront step 33"></p>
-<ol start="40">
-<li>Test an asset such as <code>https://lunchsync.space/media/lunchsync.png</code> to confirm the <code>media/*</code> behavior works correctly.</li>
+<ol start="39">
+<li>Test a media asset like <code>https://lunchsync.space/media/lunchsync.png</code> to confirm <code>media/*</code> behavior works correctly.</li>
 </ol>
 <p><img src="http://localhost:1313/Workshop-FCAJ-2026-Report/images/4-Workshop/4.4-S3-CloudFront/cf.34.jpg" alt="CloudFront step 34"></p>
 
@@ -1638,19 +1633,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/clipboard.min.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.min.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/perfect-scrollbar.jquery.min.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/jquery.sticky.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/featherlight.min.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/highlight.pack.js?1776383408"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1776382823"></script>
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1776382823"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/modernizr.custom-3.6.0.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/learn.js?1776383408"></script>
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/js/hugo-learn.js?1776383408"></script>
 
-    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1776382823" rel="stylesheet" />
-    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1776382823"></script>
+    <link href="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.css?1776383408" rel="stylesheet" />
+    <script src="http://localhost:1313/Workshop-FCAJ-2026-Report/mermaid/mermaid.js?1776383408"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
